@@ -155,10 +155,12 @@ main {
   display: flex;
   justify-content: space-between;
   width: 95%;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: 150px;
   user-select: none;
   z-index: 9999;
+  gap: 30px;
+  text-align: center;
 }
 .resi-status h3 {
   padding: 7px 14px;
