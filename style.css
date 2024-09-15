@@ -61,36 +61,86 @@ nav {
   font-size: 1.5rem;
   font-weight: bold;
 }
-ul {
+nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
-li {
+nav li {
   font-size: 1rem;
 }
-li a {
-  text-decoration: none;
+nav li a {
   font-size: 18px;
-  font-weight: 500;
-  color: #f3f3f3;
-  transition: all 0.3s ease;
+  color: #e1e1e1;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
-li a:hover {
-  color: #00c964;
+nav li a:focus,
+nav li a:hover {
+  color: #fff;
 }
-li a.hire {
-  border: 2px solid white;
-  padding: 5px 20px;
-  border-radius: 50px;
-  background: transparent;
-  font-weight: 900;
+nav li a:focus:after,
+nav li a:hover:after {
+  width: 100%;
+  left: 0%;
 }
-li a.hire:hover {
-  background: white;
-  color: #121212;
+nav li a::after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+nav a.hire {
+  display: inline-block;
+  padding: 8px 25px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 40px;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+  color: white;
+  transition: all .3s ease;
+}
+nav a.hire:hover{
+  color: black;
+}
+nav a.hire:hover::before {
+  transform: translateX(0);
+ }
+nav a.hire::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
 }
 .menu-icon {
   display: none;
@@ -151,6 +201,7 @@ main {
   letter-spacing: 1;
   padding-bottom: 20vh;
 }
+
 .resi-status {
   display: flex;
   justify-content: space-between;
@@ -446,12 +497,7 @@ main {
 }
 .cta {
   min-height: 90vh;
-  background: linear-gradient(
-    135deg,
-    rgb(8, 0, 0),
-    rgb(39, 0, 0),
-    rgb(19, 0, 0)
-  );
+  background: linear-gradient(135deg, #000c38, #000742, #121030, #00004e);
   width: 100%;
   border-top: 1px solid #434343;
 }
@@ -466,10 +512,11 @@ main {
 }
 .cta .container h1 {
   font-size: 6.7rem;
-  background: linear-gradient(135deg, rgb(119, 0, 0), red, rgb(255, 64, 64));
-  background-clip: text;
+  background: linear-gradient(135deg, #00f9ff, #00d4ff, #0077ff);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 10px rgb(104, 0, 0);
+  background-clip: text;
+  text-shadow: 1px 1px 10px rgb(0, 60, 255);
   margin: 0;
   padding: 0 20px;
 }
@@ -722,7 +769,7 @@ main {
   }
   .main-heading {
     font-size: 3rem;
-    font-family: "Cormorant";
+    font-family: "Bai Jamjuree";
     font-weight: 500;
     letter-spacing: 1;
   }
