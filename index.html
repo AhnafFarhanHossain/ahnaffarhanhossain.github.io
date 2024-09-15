@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ahnaf Farhan's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
@@ -28,13 +25,10 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li>
-            <a
-              href="https://www.upwork.com/freelancers/~015443a25fafa8041e"
-              class="hire"
-              >Hire</a
-            >
-          </li>
+          <a href="https://www.upwork.com/freelancers/~015443a25fafa8041e"
+        class="hire">
+          Hire <i class="fa-solid fa-arrow-right"></i>
+      </a>
         </ul>
       </nav>
     </header>
@@ -48,17 +42,16 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-        <a
-          href="https://www.upwork.com/freelancers/~015443a25fafa8041e"
-          class="hireh"
-          >Hire Me</a
-        >
+        <a href="https://www.upwork.com/freelancers/~015443a25fafa8041e"
+        class="hire">
+          Hire <i class="fa-solid fa-arrow-right"></i>
+      </a>
       </div>
     </div>
 
     <main>
-      <div class="main-heading">
-        AHNAF FARHAN HOSSAIN
+      <div class="main-heading-div">
+        <h1 class="main-heading">AHNAF FARHAN HOSSAIN</h1>
       </div>
     </main>
     <div class="resi-status">
@@ -170,7 +163,7 @@
     <section class="cta">
       <div class="container">
         <h1>Ready to Rock and Roll?</h1>
-        <p>Let's Create together and we will Rule the world of <span style="color: #c90000;">Websites</span></p>
+        <p>Let's Create together and we will Rule the world of <span style="color: #002fc9;">Websites</span></p>
         <a href="mailto:ahnaffarhanhossain@gmail.com"><button class="button">
           Dominate the World
           <svg
@@ -255,9 +248,15 @@
         document.getElementById("myNav").style.display = "none";
       }
     </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+
+  <script>
+        const text = baffle('.mainH1');
+    text.set({
+      characters: '!/|~#.^+*$#%nwf',
+      speed: 100
+    });
+    text.start();
+    text.reveal(2000);
+  </script>
   </body>
 </html>
