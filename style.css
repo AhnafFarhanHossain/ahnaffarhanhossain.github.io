@@ -700,6 +700,13 @@ main {
   .cta .container h1 {
     font-size: 5rem;
   }
+  .section-headings {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    white-space: wrap;
+    font-size: 1rem !important;
+    padding-bottom: 20px;
 }
 @media (max-width: 768px) {
   .button-66 {
