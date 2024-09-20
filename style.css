@@ -19,7 +19,7 @@ body {
   margin: 0;
   font-family: "Bai Jamjuree", sans-serif;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
-    url(Assets/pexels-explorebernard-1805435.jpg);
+    url(Assets/dark.jpg);
   background-size: contain;
   color: white;
   display: flex;
@@ -717,7 +717,7 @@ main {
     display: none;
   }
   body {
-    background: url(Assets/pexels-dark.webp);
+    background: url(Assets/pexels-explorebernard-1805435.jpg);
     background-size: contain;
     backdrop-filter: brightness(50%);
   }
