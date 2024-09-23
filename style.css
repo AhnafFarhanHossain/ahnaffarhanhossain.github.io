@@ -42,10 +42,9 @@ p {
 }
 header {
   width: 95%;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
   margin-top: 10px;
   border-radius: 50px;
   border: 1px solid #313131;
@@ -54,19 +53,47 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
+nav .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .social {
+  display: flex;
+  gap: 14px;
+  margin-right: 40px;
+  background: rgba(88, 88, 88, 0.301);
+  padding: 9px 24px;
+  border-radius: 40px;
+  border: 1px solid #434343;
+}
+nav .social i {
+  color: white;
+  width: 9px;
+  height: 9px;
+  padding: 9px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .social i:hover {
+  background: rgba(99, 99, 99, 0.315);
+}
 ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
   margin: 0;
   padding: 0;
+  gap: 2rem;
 }
 li {
   font-size: 1rem;
@@ -93,37 +120,48 @@ li a.hire:hover {
   color: #121212;
 }
 .menu-icon {
-  display: none;
   font-size: 1.5rem;
   cursor: pointer;
+  background: rgba(88, 88, 88, 0.301);
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #434343;
+  font-size: 1.3rem;
+}
+.menu-icon:hover {
+  background: rgba(88, 88, 88, 0.733);
 }
 .overlay {
-  height: 100vh;
-  width: 100%;
+  height: fit-content;
+  width: fit-content;
   display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  background: linear-gradient(135deg, #00743a, #004b19);
+  position: absolute;
+  z-index: 99999;
+  right: 100px;
+  top: 100px;
+  background: #121212;
   overflow-x: hidden;
   transition: 0.5s;
+  padding: 30px 70px;
+  border-radius: 10px;
+  border: 1px solid #434343;
 }
 .overlay-content {
   position: relative;
   top: 25%;
   width: 100%;
-  text-align: center;
   margin-top: 50px;
+  text-align: center;
 }
 .overlay a {
   padding: 8px;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: white;
   display: block;
   transition: 0.3s;
   font-weight: 900;
+  text-align: right;
 }
 .overlay a:hover {
   color: rgba(255, 255, 255, 0.4);
@@ -132,7 +170,13 @@ li a.hire:hover {
   position: absolute;
   top: 20px;
   right: 45px;
-  font-size: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: rgba(88, 88, 88, 0.301);
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid #434343;
+  font-size: 1.3rem;
 }
 button {
   font-family: "Bai Jamjuree" !important;
@@ -241,6 +285,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-top: 1px solid #434343;
 }
 .about .container .about-contents {
   display: flex;
@@ -670,12 +715,6 @@ main {
     padding-bottom: 100px;
   }
 }
-@media (max-width: 1000px) {
-  main-heading {
-    font-size-adjust: 7rem;
-    font-family: "Cormorant";
-  }
-}
 @media (max-width: 840px) {
   .skills .container .card-wrapper {
     grid-template-columns: repeat(1, 1fr);
@@ -707,6 +746,15 @@ main {
     white-space: wrap;
     font-size: 1rem !important;
     padding-bottom: 20px;
+  }
+  nav .social {
+    scale: 0.8;
+  }
+  nav {
+    padding: 0 15px;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 @media (max-width: 768px) {
   .button-66 {
@@ -717,9 +765,9 @@ main {
     display: none;
   }
   body {
-    background: url(Assets/pexels-explorebernard-1805435.jpg);
+    background: none;
+    background: url(Assets/magicpattern-polka-dot-pattern-1727087072791.png);
     background-size: contain;
-    backdrop-filter: brightness(50%);
   }
   .about-content {
     max-width: 750px;
@@ -728,10 +776,12 @@ main {
     display: block;
   }
   .main-heading {
-    font-size: 3rem;
-    font-family: "Cormorant";
-    font-weight: 500;
-    letter-spacing: 1;
+    font-size: 2.5rem;
+    padding: 0 15px;
+    font-family: "Bai Jamjuree";
+    font-weight: 900;
+    text-transform: lowercase;
+    letter-spacing: 0;
   }
   .skills .container .card-wrapper {
     grid-template-columns: repeat(1, 1fr);
@@ -754,5 +804,33 @@ main {
   }
   .skills h1 {
     font-size: 2.5rem;
+  }
+  .resi-status {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  nav * {
+    scale: 0.85;
+  }
+}
+@media (max-width: 370px) {
+  header {
+    width: 100%;
+    border: none;
+    gap: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  nav {
+    padding: 10px;
+    margin: 0 10px;
+    max-width: 90%;
+    align-items: center;
+    justify-content: center;
   }
 }
