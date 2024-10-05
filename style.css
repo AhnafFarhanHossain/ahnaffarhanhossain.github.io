@@ -137,7 +137,7 @@ li a.hire:hover {
   display: none;
   position: absolute;
   z-index: 99999;
-  right: 100px;
+  right: 12vw;
   top: 100px;
   background: #121212;
   overflow-x: hidden;
