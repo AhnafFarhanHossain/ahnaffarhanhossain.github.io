@@ -65,22 +65,19 @@ nav .right {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 nav .social {
   display: flex;
-  gap: 14px;
-  margin-right: 40px;
-  background: rgba(88, 88, 88, 0.301);
-  padding: 9px 24px;
-  border-radius: 40px;
+  background: rgba(39, 39, 39, 0.301);
+  border-radius: 5px;
   border: 1px solid #434343;
 }
 nav .social i {
   color: white;
   width: 9px;
   height: 9px;
-  padding: 9px;
-  border-radius: 50%;
+  padding: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,41 +85,40 @@ nav .social i {
 nav .social i:hover {
   background: rgba(99, 99, 99, 0.315);
 }
-ul {
+nav ul {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
   gap: 2rem;
 }
-li {
+nav li {
   font-size: 1rem;
 }
-li a {
+nav li a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
   color: #f3f3f3;
   transition: all 0.3s ease;
 }
-li a:hover {
+nav li a:hover {
   color: #00c964;
 }
-li a.hire {
+nav li a.hire {
   border: 2px solid white;
   padding: 5px 20px;
   border-radius: 50px;
   background: transparent;
   font-weight: 900;
 }
-li a.hire:hover {
+nav li a.hire:hover {
   background: white;
   color: #121212;
 }
 .menu-icon {
-  font-size: 1.5rem;
   cursor: pointer;
-  background: rgba(88, 88, 88, 0.301);
+  background: rgba(39, 39, 39, 0.301);
   padding: 8px 12px;
   border-radius: 5px;
   border: 1px solid #434343;
@@ -172,7 +168,7 @@ li a.hire:hover {
   right: 45px;
   font-size: 1.5rem;
   cursor: pointer;
-  background: rgba(88, 88, 88, 0.301);
+  background: rgba(39, 39, 39, 0.301);
   padding: 8px 15px;
   border-radius: 5px;
   border: 1px solid #434343;
@@ -814,9 +810,19 @@ main {
     justify-content: center;
   }
 }
-@media (max-width: 500px) {
-  nav * {
-    scale: 0.85;
+@media (max-width: 400px) {
+  nav {
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+
+  }
+  nav .right {
+    gap: 5px;
   }
 }
 @media (max-width: 370px) {
