@@ -843,3 +843,28 @@ main {
     justify-content: center;
   }
 }
+
+
+html {
+  overflow-y: scroll;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
