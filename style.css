@@ -12,7 +12,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 body {
   box-sizing: border-box;
@@ -434,11 +433,11 @@ main {
   background-repeat: no-repeat;
 }
 .projects .container .card-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 20px;
   padding: 0 20px;
   padding-bottom: 20px;
+  overflow-x: scroll !important;
 }
 .projects .container .card-wrapper .card {
   background: #00072d6e;
@@ -446,6 +445,7 @@ main {
   border-radius: 20px;
   transition: all 0.3s ease;
   border: 1px solid transparent;
+  min-width: 650px;
 }
 .projects .container .card-wrapper .card .card-top {
   display: flex;
@@ -727,7 +727,7 @@ main {
     margin: 0;
   }
   .projects .container .card-wrapper {
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
   }
   .section-headings h1 {
     border-bottom: none;
@@ -809,6 +809,15 @@ main {
     align-items: center;
     justify-content: center;
   }
+  .projects .container .card-wrapper .card {
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cta .container {
+    padding: 30px 0;
+  }
 }
 @media (max-width: 400px) {
   nav {
@@ -819,7 +828,6 @@ main {
     padding-left: 5px;
     padding-bottom: 5px;
     padding-right: 5px;
-
   }
   nav .right {
     gap: 5px;
@@ -843,7 +851,6 @@ main {
     justify-content: center;
   }
 }
-
 
 html {
   overflow-y: scroll;
