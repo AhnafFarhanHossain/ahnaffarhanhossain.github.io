@@ -810,7 +810,7 @@ main {
     justify-content: center;
   }
   .projects .container .card-wrapper .card {
-    min-width: 500px;
+    min-width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
