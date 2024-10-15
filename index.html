@@ -8,6 +8,10 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+      <!-- Slick Slider Theme CSS Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- Slick Slider CSS Link -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header
@@ -149,32 +153,33 @@
         <h1>My Lovely Creations</h1>
       </div>
       <div class="container">
-        <div class="card-wrapper projects-wrapper">
-          <div class="card">
-            <div class="card-top">
-              <h2>Hero Travels</h2>
-              <a href="https://herotravels.vercel.app" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#232326" d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6.5-.707-.707z"/></svg></a>
+        <div class="card-wrapper">
+            <div class="card">
+              <div class="card-top">
+                <h2>Hero Travels</h2>
+                <a href="https://herotravels.vercel.app" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#232326" d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6k.5-.707-.707z"/></svg></a>
+              </div>
+              <p>Hero Travels was a team project whcich is Travel Partner website. The tools that were used are - HTML, CSS, and Figma</p>
+              <img src="Assets/herotravels.png" alt="">
             </div>
-            <p>Hero Travels was a team project whcich is Travel Partner website. The tools that were used are - HTML, CSS, and Figma</p>
-            <img src="Assets/herotravels.png" alt="">
-          </div>
-          <div class="card">
-            <div class="card-top">
-              <h2>Whitepace - SaaS</h2>
-              <a href="https://whitepace-beige.vercel.app" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#232326" d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6.5-.707-.707z"/></svg></a>
+            <div class="card">
+              <div class="card-top">
+                <h2>Whitepace - SaaS</h2>
+                <a href="https://whitepace-beige.vercel.app" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#232326" d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6.5-.707-.707z"/></svg></a>
+              </div>
+              <p>Whitepace is also a solo project made by using HTML, CSS, and Figma. It is a SaaS website that offers service for Project Management.</p>
+              <img src="Assets/whitepace.png" alt="">
             </div>
-            <p>Whitepace is also a solo project made by using HTML, CSS, and Figma. It is a SaaS website that offers service for Project Management.</p>
-            <img src="Assets/whitepace.png" alt="">
-          </div>
           <div class="card">
             <div class="card-top">
               <h2>Cheffest - Restaurant Website</h2>
               <a href="https://cheffest.vercel.app" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#232326" d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6.5-.707-.707z"/></svg></a>
             </div>
-            <p>Cheffest is a cafe/restaurant website developed by me using HTML, CSS, Vanilla Javascript, jQuery CounterUp Plugin and Figma. Project duration is approx. 20-30 days.</p>
+            <p>Cheffest is a cafe/restaurant website developed by me using HTML, CSS, Vanilla Javascript and Figma. Project duration is approx. 20-30 days.</p>
             <img src="Assets/cheffest.png" alt="">
           </div>
         </div>
+        <span style="text-align: center; display: block; padding-bottom: 20px; font-weight: 700; color: #333; font-size: 3rem; user-select: none;">Scroll <i class="fa-solid fa-arrow-right"></i></span>
       </div>
     </section>
 
@@ -266,9 +271,7 @@
         document.getElementById("myNav").style.display = "none";
       }
     </script>
+    <!-- CDN's for Applications -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>
