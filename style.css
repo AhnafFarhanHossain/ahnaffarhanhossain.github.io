@@ -18,7 +18,7 @@ body {
   margin: 0;
   font-family: "Bai Jamjuree", sans-serif;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
-    url(Assets/bg-freebie.png);
+    url(Assets/bg-freebie.jpg);
   background-size: cover;
   color: white;
   backdrop-filter: blur(10px);
