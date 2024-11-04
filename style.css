@@ -270,8 +270,8 @@ main {
   transition-duration: 0.3s;
 }
 .main-heading {
-  font-size: 4.1rem;
-  letter-spacing: 0.17cm;
+  font-size: 4.5rem;
+  letter-spacing: -2px;
 }
 .about {
   min-height: 100vh;
