@@ -33,6 +33,9 @@ body {
   max-width: 1340px;
   margin: 0 auto;
 }
+.hidden {
+  display: none;
+}
 a {
   text-decoration: none;
 }
@@ -70,10 +73,9 @@ nav .social {
   display: flex;
   background: rgba(39, 39, 39, 0.301);
   border-radius: 5px;
-  border: 1px solid #434343;
 }
 nav .social i {
-  color: white;
+  color: #fff;
   width: 9px;
   height: 9px;
   padding: 18px;
@@ -82,96 +84,52 @@ nav .social i {
   justify-content: center;
 }
 nav .social i:hover {
-  background: rgba(99, 99, 99, 0.315);
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  gap: 2rem;
-}
-nav li {
-  font-size: 1rem;
-}
-nav li a {
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  color: #f3f3f3;
-  transition: all 0.3s ease;
-}
-nav li a:hover {
-  color: #00c964;
-}
-nav li a.hire {
-  border: 2px solid white;
-  padding: 5px 20px;
-  border-radius: 50px;
-  background: transparent;
-  font-weight: 900;
-}
-nav li a.hire:hover {
-  background: white;
-  color: #121212;
+  background: rgba(88, 88, 88, 0.425);
 }
 .menu-icon {
   cursor: pointer;
-  background: rgba(39, 39, 39, 0.301);
+  background: rgba(39, 39, 39, 0.459);
   padding: 8px 12px;
   border-radius: 5px;
-  border: 1px solid #434343;
   font-size: 1.3rem;
+  color: #fff;
+  user-select: none;
 }
 .menu-icon:hover {
-  background: rgba(88, 88, 88, 0.733);
+  background: rgba(88, 88, 88, 0.425);
 }
 .overlay {
   height: fit-content;
   width: fit-content;
-  display: none;
   position: absolute;
   z-index: 99999;
-  right: 100px;
+  right: 110px;
   top: 100px;
   background: #121212;
   overflow-x: hidden;
   transition: 0.5s;
-  padding: 30px 70px;
+  padding: 30px 50px;
   border-radius: 10px;
-  border: 1px solid #434343;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 }
 .overlay-content {
   position: relative;
   top: 25%;
   width: 100%;
-  margin-top: 50px;
   text-align: center;
 }
 .overlay a {
   padding: 8px;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: white;
   display: block;
   transition: 0.3s;
   font-weight: 900;
-  text-align: right;
+  text-align: center;
 }
 .overlay a:hover {
-  color: rgba(255, 255, 255, 0.4);
-}
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  background: rgba(39, 39, 39, 0.301);
-  padding: 8px 15px;
-  border-radius: 5px;
-  border: 1px solid #434343;
-  font-size: 1.3rem;
+  color: #00c964;
 }
 button {
   font-family: "Bai Jamjuree" !important;
