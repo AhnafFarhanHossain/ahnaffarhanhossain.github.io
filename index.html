@@ -47,9 +47,6 @@
     </header>
 
     <div id="myNav" class="overlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
-      >
       <div class="overlay-content">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -57,7 +54,7 @@
         <a href="#contact">Contact</a>
         <a
           href="https://www.upwork.com/freelancers/~015443a25fafa8041e"
-          class="hireh"
+          class="hire"
           >Hire Me</a
         >
       </div>
@@ -272,11 +269,7 @@
 
     <script>
       function openNav() {
-        document.getElementById("myNav").style.display = "block";
-      }
-
-      function closeNav() {
-        document.getElementById("myNav").style.display = "none";
+        document.getElementById("myNav").classList.toggle("hidden")
       }
     </script>
     <!-- CDN's for Applications -->
