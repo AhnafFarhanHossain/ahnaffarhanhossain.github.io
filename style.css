@@ -5,13 +5,9 @@
   font-family: "OPTIEngraversRoman";
   src: url("Fonts/OPTIEngraversRoman-No2.otf");
 }
-* {
-  scroll-behavior: smooth;
-}
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@font-face {
+  font-family: "Recoleta DEMO";
+  src: url("Fonts/Recoleta-RegularDEMO.otf");
 }
 body {
   box-sizing: border-box;
@@ -28,6 +24,9 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background-attachment: fixed;
+  opacity: 0;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
 }
 .container {
   max-width: 1340px;
@@ -149,7 +148,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-family: "OPTIEngraversRoman", "Cormorant";
+  font-family: "OPTIEngraversRoman", "Recoleta DEMO";
   font-weight: 400;
   user-select: none;
   letter-spacing: 1;
@@ -170,12 +169,18 @@ main {
   padding: 7px 14px;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(100px);
-  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
   border-radius: 40px;
   color: #8b8b8b;
 }
+
+.resi-status h3:hover {
+  transform: translateY(-3px);
+}
+
 .back-to-top {
   width: 50px;
   height: 50px;
@@ -194,6 +199,14 @@ main {
   right: 40px;
   bottom: 80px;
   z-index: 9999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .svgIcon {
@@ -249,12 +262,22 @@ main {
 }
 .about .container .about-contents {
   display: flex;
-  padding: 0 30px;
-  padding-bottom: 30px;
+  padding: 40px;
   align-items: center;
   gap: 30px;
   justify-content: space-between;
   margin: 30px 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Optional: Add hover effect */
+.about .container .about-contents:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
 }
 .about-headings {
   padding: 20px 100px;
@@ -276,14 +299,14 @@ main {
   max-width: 750px;
 }
 .about .container p {
-  margin-bottom: 60px;
-  font-size: 3rem;
+  margin-bottom: 40px;
+  font-size: 2.4rem;
   font-weight: 100;
-  font-family: "Cormorant";
+  font-family: 'Recoleta DEMO', sans-serif;
 }
 .about .container p span {
   font-style: italic;
-  font-size: 3.4rem;
+  font-size: 2.5rem;
   color: #00c964;
 }
 .button-66 {
@@ -325,13 +348,17 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   border-top: 1px solid #434343;
+  padding: 30px 0;
 }
 .section-headings {
   padding: 20px 100px;
+  font-family: 'Recoleta DEMO', sans-serif;
 }
 .section-headings h3 {
-  font-size: 28px;
+  font-size: 24px;
   color: #434343;
+  font-family: 'Recoleta DEMO', sans-serif;
+  text-transform: uppercase;
 }
 .section-headings h1 {
   font-size: 4rem;
@@ -388,74 +415,238 @@ main {
   grid-column: span 2;
 }
 .projects {
-  min-height: 100vh;
+  padding: 80px 0;
   width: 100%;
-  background: radial-gradient(rgb(0, 0, 46), black);
+  background: linear-gradient(135deg, #000000, #002e1c, #001a0e);
   border-top: 1px solid #434343;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
-.projects .container .card-wrapper {
-  display: flex;
-  gap: 20px;
+
+/* Optional: Add a subtle overlay pattern */
+.projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(0, 201, 100, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.projects .container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 20px;
-  padding-bottom: 20px;
-  overflow-x: scroll !important;
+  position: relative; /* To keep content above the overlay */
 }
-.projects .container .card-wrapper .card {
-  background: #00072d6e;
-  padding: 40px 30px;
+
+/* Section Headings */
+.section-headings {
+  text-align: left;
+  padding: 0 100px;
+  margin-bottom: 40px;
+}
+
+.section-headings h3 {
+  font-size: 28px;
+  color: #434343;
+  margin-bottom: 10px;
+}
+
+.section-headings h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* Carousel Container */
+.project-carousel {
+  margin-top: 40px;
+}
+
+/* Card Styling */
+.project-carousel .card {
+  background: rgba(0, 7, 45, 0.3);
   border-radius: 20px;
+  padding: 30px;
+  margin: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  border: 1px solid transparent;
-  min-width: 650px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.projects .container .card-wrapper .card .card-top {
+
+.project-carousel .card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 201, 100, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 201, 100, 0.1);
+}
+
+/* Card Top Section */
+.card-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
-.projects .container .card-wrapper .card .card-top svg {
-  background: white;
-  width: 30px;
-  height: 30px;
-  padding: 10px;
-  border-radius: 50%;
-  color: black;
+
+.card-top h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.card-top a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.card-top a:hover {
+  color: #00c964;
+}
+
+/* Card Content */
+.project-carousel .card p {
+  color: #e0e0e0;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+/* Tech Stack */
+.tech-stack {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotate(-135deg);
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.tech-stack span {
+  background: rgba(0, 201, 100, 0.1);
+  color: #00c964;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 201, 100, 0.2);
   transition: all 0.3s ease;
 }
-.projects .container .card-wrapper .card .card-top svg:hover {
-  transform: rotate(-90deg);
-  cursor: pointer;
+
+.tech-stack span:hover {
+  background: rgba(0, 201, 100, 0.2);
+  transform: translateY(-2px);
 }
-.projects .container .card-wrapper .card:hover {
-  border: 1px solid #434343;
+
+/* Project Image */
+.project-carousel .card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
-.projects .container .card-wrapper .card h2 {
-  font-weight: lighter;
-  font-size: 3rem;
-  font-family: "Cormorant";
+
+.project-carousel .card:hover img {
+  transform: scale(1.02);
 }
-.projects .container .card-wrapper .card img {
-  max-width: 100%;
-  border-radius: 20px;
-  filter: brightness(70%);
+
+/* Carousel Navigation */
+.owl-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 201, 100, 0.15) !important;
+  border-radius: 50% !important;
+  color: #00c964 !important;
+  font-size: 20px !important;
+  transition: all 0.3s ease;
 }
-.projects .container .card-wrapper .card p {
-  margin-bottom: 30px;
+
+.owl-nav button:hover {
+  background: rgba(0, 201, 100, 0.3) !important;
+}
+
+.owl-prev {
+  left: -60px;
+}
+
+.owl-next {
+  right: -60px;
+}
+
+/* Carousel Dots */
+.owl-dots {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background: rgba(255, 255, 255, 0.2) !important;
+  display: block;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active span,
+.owl-dot:hover span {
+  background: #00c964 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .owl-nav {
+    display: none;
+  }
+  
+  .projects .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-carousel .card {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .card-top h2 {
+    font-size: 20px;
+  }
+  
+  .project-carousel .card p {
+    font-size: 15px;
+  }
+  
+  .project-carousel .card img {
+    height: 180px;
+  }
+  
+  .tech-stack {
+    gap: 6px;
+  }
+  
+  .tech-stack span {
+    padding: 5px 12px;
+    font-size: 13px;
+  }
 }
 .cta {
   min-height: 90vh;
   background: linear-gradient(
     135deg,
     rgb(8, 0, 0),
-    rgb(39, 0, 0),
-    rgb(19, 0, 0)
+    rgb(0, 0, 0),
+    rgb(17, 17, 17)
   );
   width: 100%;
   border-top: 1px solid #434343;
@@ -463,84 +654,22 @@ main {
 .cta .container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 30px;
   width: 100%;
   min-height: 90vh;
   flex-direction: column;
-  text-align: center;
 }
 .cta .container h1 {
-  font-size: 6.7rem;
-  background: linear-gradient(135deg, rgb(119, 0, 0), red, rgb(255, 64, 64));
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 10px rgb(104, 0, 0);
+  font-size: 5rem;
+  font-family: 'Recoleta DEMO', sans-serif;
+  color: #00c964;
   margin: 0;
-  padding: 0 20px;
+  line-height: 1.2;
 }
 .cta .container p {
-  font-size: 1.4rem;
-  font-style: italic;
-  color: #444;
-  padding: 0 20px;
-}
-.cta .container .button {
-  border-radius: 8px;
-  border: 1px solid #fff;
-  background: rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(15px);
-  position: relative;
-  transition: all 0.3s ease-in-out;
-
-  padding-block: 0.5rem;
-  padding-inline: 1.25rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #ffff;
-  gap: 10px;
-
-  outline: none;
-  overflow: hidden;
-  font-size: 15px;
-}
-
-.cta .container .icon {
-  width: 24px;
-  height: 24px;
-  transition: all 0.3s ease-in-out;
-}
-
-.cta .container .button:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.5);
-}
-
-.cta .container .button:hover .icon {
-  transform: translate(4px);
-}
-
-.cta .container .button:hover::before {
-  animation: shine 1s ease-out infinite;
-}
-
-.cta .container .button::before {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 100%;
-  background-image: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 30%,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0) 70%
-  );
-  top: 0;
-  left: -100px;
-  opacity: 0.6;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 30px;
 }
 
 @keyframes shine {
@@ -696,9 +825,6 @@ main {
   .section-headings h1 {
     border-bottom: none;
   }
-  .cta .container h1 {
-    font-size: 5rem;
-  }
   .section-headings {
     padding: 0;
     margin: 0;
@@ -741,7 +867,7 @@ main {
   .main-heading {
     font-size: 2.5rem;
     padding: 0 15px;
-    font-family: "Bai Jamjuree";
+    font-family: "Recoleta DEMO";
     font-weight: 900;
     text-transform: lowercase;
     letter-spacing: 0;
@@ -779,8 +905,15 @@ main {
     flex-direction: column;
     justify-content: space-between;
   }
+  .cta .container h1 {
+    font-size: 3rem;
+    padding: 0 20px 0 0;
+  }
+  .cta .container p {
+    padding: 0 20px 0 0;
+  }
   .cta .container {
-    padding: 30px 0;
+    padding: 30px 10px;
   }
 }
 @media (max-width: 400px) {
@@ -818,6 +951,7 @@ main {
 
 html {
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 /* Scrollbar styles */
@@ -838,4 +972,268 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-heading {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+/* Ensure elements are hidden initially */
+.about .about-contents,
+.skills .card,
+.projects .card,
+.cta h1,
+.cta p,
+.cta .button,
+.footer-section {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about .container .about-contents {
+    flex-direction: column;
+    padding: 25px;
+    margin: 20px 15px;  /* Added horizontal margin */
+    gap: 20px;
+  }
+
+  .about .container p {
+    font-size: 2rem;  /* Reduced font size for better mobile view */
+    margin-bottom: 30px;
+  }
+
+  .about .container img {
+    width: 100%;  /* Make image responsive */
+    height: auto;
+  }
+
+  .about h1 {
+    font-size: 4rem;  /* Adjust heading size for mobile */
+    padding: 0 15px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .about .container .about-contents {
+    padding: 20px;
+    margin: 15px 10px;
+  }
+
+  .about .container p {
+    font-size: 1.8rem;
+  }
+
+  .about h1 {
+    font-size: 3rem;
+  }
+}
+
+.skills .card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+
+.skills .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.skills .card:hover::before {
+  transform: translateX(100%);
+}
+
+/* Add custom selection color */
+::selection {
+  background: rgba(0,201,100,0.3);
+  color: white;
+}
+
+/* Improve button hover states */
+.button, .button-66 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover, .button-66:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Project Carousel Styles */
+.project-carousel {
+  padding: 20px 0;
+}
+
+.project-carousel .card {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  height: calc(100% - 20px);
+}
+
+.project-carousel .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-top h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.card-top a svg {
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.card-top a:hover svg {
+  color: #00c964;
+}
+
+.project-carousel .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-carousel .card:hover img {
+  transform: scale(1.02);
+}
+
+/* Navigation Arrows */
+.owl-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 50% !important;
+  color: white !important;
+  font-size: 24px !important;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+}
+
+.owl-prev {
+  left: -60px;
+}
+
+.owl-next {
+  right: -60px;
+}
+
+.owl-nav button:hover {
+  background: rgba(0, 201, 100, 0.5) !important;
+}
+
+/* Dots Styling */
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background: rgba(255, 255, 255, 0.2) !important;
+  display: block;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active span,
+.owl-dot:hover span {
+  background: #00c964 !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .owl-nav {
+    display: none;
+  }
+  
+  .project-carousel .card {
+    margin: 10px 5px;
+    padding: 20px;
+  }
+  
+  .card-top h2 {
+    font-size: 1.5rem;
+  }
+  
+  .project-carousel .card p {
+    min-height: auto;
+  }
+  
+  .project-carousel .card img {
+    height: 180px;
+  }
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.tech-stack span {
+  background: rgba(0, 201, 100, 0.1);
+  color: #00c964;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(0, 201, 100, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tech-stack span:hover {
+  background: rgba(0, 201, 100, 0.2);
+  transform: translateY(-2px);
+}
+
+.project-carousel .card p {
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 15px 0;
 }
