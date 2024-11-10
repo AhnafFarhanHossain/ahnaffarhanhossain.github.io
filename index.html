@@ -12,6 +12,8 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <!-- Slick Slider CSS Link -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   </head>
   <body>
     <header
@@ -146,73 +148,102 @@
 
     <section class="projects" id="projects">
       <div class="section-headings">
-        <h3>Latest Projects</h3>
+        <h3>Featured Projects</h3>
         <h1>My Lovely Creations</h1>
       </div>
       <div class="container">
-        <div class="card-wrapper">
-            <div class="card">
-              <div class="card-top">
-                <h2>Hero Travels</h2>
-                <a href="https://herotravels.vercel.app" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#232326" d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6k.5-.707-.707z"/></svg></a>
-              </div>
-              <p>Hero Travels was a team project whcich is Travel Partner website. The tools that were used are - HTML, CSS, and Figma</p>
-              <img src="Assets/herotravels.png" alt="">
-            </div>
-            <div class="card">
-              <div class="card-top">
-                <h2>Whitepace - SaaS</h2>
-                <a href="https://whitepace-beige.vercel.app" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#232326" d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6.5-.707-.707z"/></svg></a>
-              </div>
-              <p>Whitepace is also a solo project made by using HTML, CSS, and Figma. It is a SaaS website that offers service for Project Management.</p>
-              <img src="Assets/whitepace.png" alt="">
-            </div>
+        <div class="owl-carousel project-carousel owl-theme">
+          <!-- Project 1 -->
           <div class="card">
             <div class="card-top">
-              <h2>Cheffest - Restaurant Website</h2>
-              <a href="https://cheffest.vercel.app" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#232326" d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6.5-.707-.707z"/></svg></a>
+              <h2>Hero Travels</h2>
+              <a href="https://herotravels.vercel.app" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
             </div>
-            <p>Cheffest is a cafe/restaurant website developed by me using HTML, CSS, Vanilla Javascript and Figma. Project duration is approx. 20-30 days.</p>
-            <img src="Assets/cheffest.png" alt="">
+            <p>Hero Travels was a team project which is Travel Partner website. The tools that were used are - HTML, CSS, and Figma</p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Figma</span>
+            </div>
+            <img src="Assets/herotravels.png" alt="Hero Travels Project">
           </div>
+
+          <!-- Project 2 -->
+          <div class="card">
+            <div class="card-top">
+              <h2>Whitepace - SaaS</h2>
+              <a href="https://whitepace-beige.vercel.app" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </div>
+            <p>Whitepace is also a solo project made by using HTML, CSS, and Figma. It is a SaaS website that offers service for Project Management.</p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Figma</span>
+            </div>
+            <img src="Assets/whitepace.png" alt="Whitepace Project">
+          </div>
+
+          <!-- Project 3 -->
+          <div class="card">
+            <div class="card-top">
+              <h2>Cheffest - Restaurant</h2>
+              <a href="https://cheffest.vercel.app" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </div>
+            <p>Cheffest is a modern restaurant website showcasing culinary excellence. Built with HTML, CSS, JavaScript, and designed in Figma.</p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Figma</span>
+            </div>
+            <img src="Assets/cheffest.png" alt="Cheffest Restaurant Website">
+          </div>
+
+          <!-- Project 4 -->
           <div class="card">
             <div class="card-top">
               <h2>Elecar - Car Dealership</h2>
-              <a href="https://elecar-kappa.vercel.app" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#232326" d="m18.294 16.793-5.293 5.293V1h-1v21.086l-5.295-5.294-.707.707L12.501 24l6.5-6.5-.707-.707z"/></svg></a>
+              <a href="https://elecar-kappa.vercel.app" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
             </div>
-            <p>Elecar is a car dealership website offering cars from infamous brands such as Porsche, BMW, Audi and more. This website was made using HTML, CSS, Javascript and Figma. Project duration is 1 - 1.5 month</p>
-            <img src="Assets/elecar.png" alt="">
+            <p>Elecar is a premium car dealership platform featuring luxury vehicles from top brands like Porsche, BMW, and Audi. Built with HTML, CSS, JavaScript, and designed in Figma.</p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Figma</span>
+            </div>
+            <img src="Assets/elecar.png" alt="Elecar Dealership Website">
           </div>
         </div>
-        <span style="text-align: center; display: block; padding-bottom: 20px; font-weight: 700; color: #333; font-size: 3rem; user-select: none;">Scroll <i class="fa-solid fa-arrow-right"></i></span>
       </div>
     </section>
 
     <section class="cta">
       <div class="container">
-        <h1>Ready to Rock and Roll?</h1>
-        <p>Let's Create together and we will Rule the world of <span style="color: #c90000;">Websites</span></p>
-        <a href="mailto:ahnaffarhanhossain@gmail.com"><button class="button">
-          Dominate the World
-          <svg
-            fill="none"
-            viewBox="0 0 24 24"
-            height="24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g clip-path="url(#clip0_30_96)">
-              <path
-                fill="white"
-                d="M0.479167 11.5C0.203024 11.5 -0.0208333 11.7239 -0.0208333 12C-0.0208333 12.2761 0.203024 12.5 0.479167 12.5V11.5ZM22.9231 12.3536C23.1184 12.1583 23.1184 11.8417 22.9231 11.6464L19.7411 8.46447C19.5459 8.2692 19.2293 8.2692 19.034 8.46447C18.8388 8.65973 18.8388 8.97631 19.034 9.17157L21.8625 12L19.034 14.8284C18.8388 15.0237 18.8388 15.3403 19.034 15.5355C19.2293 15.7308 19.5459 15.7308 19.7411 15.5355L22.9231 12.3536ZM0.479167 12.5H22.5696V11.5H0.479167V12.5Z"
-              ></path>
-            </g>
-            <defs>
-              <clipPath id="clip0_30_96">
-                <rect fill="white" height="24" width="24"></rect>
-              </clipPath>
-            </defs>
-          </svg>
+        <h1>Let's connect together to bring a Change</h1>
+        <p>Let me help you grow your business with a professional website</p>
+        <a href="mailto:ahnaffarhanhossain@gmail.com"><button class="button-66">
+          Contact Me
         </button></a>
       </div>
     </section>
@@ -274,5 +305,52 @@
     </script>
     <!-- CDN's for Applications -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- First load GSAP core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    
+    <!-- Then load GSAP plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    
+    <!-- Your custom scripts -->
+    <script>
+      // Immediately show body to prevent flash of invisible content
+      gsap.set("body", { opacity: 1 });
+      
+      // Initialize ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    </script>
+    <script src="animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+      $(".project-carousel").owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        navText: [
+          '<i class="fas fa-chevron-left"></i>',
+          '<i class="fas fa-chevron-right"></i>'
+        ],
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 1
+          },
+          1024: {
+            items: 2
+          }
+        }
+      });
+    });
+    </script>
   </body>
 </html>
