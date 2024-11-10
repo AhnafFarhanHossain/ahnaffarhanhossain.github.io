@@ -6,7 +6,7 @@
   src: url("Fonts/OPTIEngraversRoman-No2.otf");
 }
 @font-face {
-  font-family: "Recoleta DEMO";
+  font-family: "Recoleta-RegularDEMO";
   src: url("Fonts/Recoleta-RegularDEMO.otf");
 }
 body {
@@ -148,7 +148,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-family: "OPTIEngraversRoman", "Recoleta DEMO";
+  font-family: "OPTIEngraversRoman", "Recoleta-RegularDEMO";
   font-weight: 400;
   user-select: none;
   letter-spacing: 1;
@@ -302,7 +302,7 @@ main {
   margin-bottom: 40px;
   font-size: 2.4rem;
   font-weight: 100;
-  font-family: 'Recoleta DEMO', sans-serif;
+  font-family: 'Recoleta-RegularDEMO', sans-serif;
 }
 .about .container p span {
   font-style: italic;
@@ -352,12 +352,12 @@ main {
 }
 .section-headings {
   padding: 20px 100px;
-  font-family: 'Recoleta DEMO', sans-serif;
+  font-family: 'Recoleta-RegularDEMO', sans-serif;
 }
 .section-headings h3 {
   font-size: 24px;
   color: #434343;
-  font-family: 'Recoleta DEMO', sans-serif;
+  font-family: 'Recoleta-RegularDEMO', sans-serif;
   text-transform: uppercase;
 }
 .section-headings h1 {
@@ -661,7 +661,7 @@ main {
 }
 .cta .container h1 {
   font-size: 5rem;
-  font-family: 'Recoleta DEMO', sans-serif;
+  font-family: 'Recoleta-RegularDEMO', sans-serif;
   color: #00c964;
   margin: 0;
   line-height: 1.2;
@@ -867,7 +867,7 @@ main {
   .main-heading {
     font-size: 2.5rem;
     padding: 0 15px;
-    font-family: "Recoleta DEMO";
+    font-family: "Recoleta-RegularDEMO";
     font-weight: 900;
     text-transform: lowercase;
     letter-spacing: 0;
