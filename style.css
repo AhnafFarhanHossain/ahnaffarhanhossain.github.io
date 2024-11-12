@@ -6,7 +6,7 @@
   src: url("Fonts/OPTIEngraversRoman-No2.otf");
 }
 @font-face {
-  font-family: "Recoleta-RegularDEMO";
+  font-family: "Recoleta DEMO";
   src: url("Fonts/Recoleta-RegularDEMO.otf");
 }
 body {
@@ -148,7 +148,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-family: "OPTIEngraversRoman", "Recoleta-RegularDEMO";
+  font-family: "OPTIEngraversRoman", "Recoleta DEMO";
   font-weight: 400;
   user-select: none;
   letter-spacing: 1;
@@ -302,7 +302,7 @@ main {
   margin-bottom: 40px;
   font-size: 2.4rem;
   font-weight: 100;
-  font-family: 'Recoleta-RegularDEMO', sans-serif;
+  font-family: "Recoleta DEMO", sans-serif;
 }
 .about .container p span {
   font-style: italic;
@@ -352,12 +352,12 @@ main {
 }
 .section-headings {
   padding: 20px 100px;
-  font-family: 'Recoleta-RegularDEMO', sans-serif;
+  font-family: "Recoleta DEMO", sans-serif;
 }
 .section-headings h3 {
   font-size: 24px;
   color: #434343;
-  font-family: 'Recoleta-RegularDEMO', sans-serif;
+  font-family: "Recoleta DEMO", sans-serif;
   text-transform: uppercase;
 }
 .section-headings h1 {
@@ -425,13 +425,17 @@ main {
 
 /* Optional: Add a subtle overlay pattern */
 .projects::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(0, 201, 100, 0.05) 0%, transparent 70%);
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 201, 100, 0.05) 0%,
+    transparent 70%
+  );
   pointer-events: none;
 }
 
@@ -607,7 +611,7 @@ main {
   .owl-nav {
     display: none;
   }
-  
+
   .projects .container {
     padding: 0 15px;
   }
@@ -618,23 +622,23 @@ main {
     padding: 20px;
     margin: 10px;
   }
-  
+
   .card-top h2 {
     font-size: 20px;
   }
-  
+
   .project-carousel .card p {
     font-size: 15px;
   }
-  
+
   .project-carousel .card img {
     height: 180px;
   }
-  
+
   .tech-stack {
     gap: 6px;
   }
-  
+
   .tech-stack span {
     padding: 5px 12px;
     font-size: 13px;
@@ -642,11 +646,10 @@ main {
 }
 .cta {
   min-height: 90vh;
-  background: linear-gradient(
-    135deg,
-    rgb(8, 0, 0),
-    rgb(0, 0, 0),
-    rgb(17, 17, 17)
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
   );
   width: 100%;
   border-top: 1px solid #434343;
@@ -661,7 +664,7 @@ main {
 }
 .cta .container h1 {
   font-size: 5rem;
-  font-family: 'Recoleta-RegularDEMO', sans-serif;
+  font-family: "Recoleta DEMO", sans-serif;
   color: #00c964;
   margin: 0;
   line-height: 1.2;
@@ -867,7 +870,7 @@ main {
   .main-heading {
     font-size: 2.5rem;
     padding: 0 15px;
-    font-family: "Recoleta-RegularDEMO";
+    font-family: "Recoleta DEMO";
     font-weight: 900;
     text-transform: lowercase;
     letter-spacing: 0;
@@ -996,22 +999,22 @@ html {
   .about .container .about-contents {
     flex-direction: column;
     padding: 25px;
-    margin: 20px 15px;  /* Added horizontal margin */
+    margin: 20px 15px; /* Added horizontal margin */
     gap: 20px;
   }
 
   .about .container p {
-    font-size: 2rem;  /* Reduced font size for better mobile view */
+    font-size: 2rem; /* Reduced font size for better mobile view */
     margin-bottom: 30px;
   }
 
   .about .container img {
-    width: 100%;  /* Make image responsive */
+    width: 100%; /* Make image responsive */
     height: auto;
   }
 
   .about h1 {
-    font-size: 4rem;  /* Adjust heading size for mobile */
+    font-size: 4rem; /* Adjust heading size for mobile */
     padding: 0 15px;
   }
 }
@@ -1042,20 +1045,25 @@ html {
 }
 
 .skills .card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
   transform: translateX(-100%);
   transition: 0.5s;
 }
 
 .skills .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .skills .card:hover::before {
@@ -1064,18 +1072,20 @@ html {
 
 /* Add custom selection color */
 ::selection {
-  background: rgba(0,201,100,0.3);
+  background: rgba(0, 201, 100, 0.3);
   color: white;
 }
 
 /* Improve button hover states */
-.button, .button-66 {
+.button,
+.button-66 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.button:hover, .button-66:hover {
+.button:hover,
+.button-66:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Project Carousel Styles */
@@ -1190,20 +1200,20 @@ html {
   .owl-nav {
     display: none;
   }
-  
+
   .project-carousel .card {
     margin: 10px 5px;
     padding: 20px;
   }
-  
+
   .card-top h2 {
     font-size: 1.5rem;
   }
-  
+
   .project-carousel .card p {
     min-height: auto;
   }
-  
+
   .project-carousel .card img {
     height: 180px;
   }
