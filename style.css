@@ -646,33 +646,38 @@ main {
 }
 .cta {
   min-height: 90vh;
-  background: radial-gradient(
-    circle at 24.1% 68.8%,
-    rgb(50, 50, 50) 0%,
-    rgb(0, 0, 0) 99.4%
-  );
+  background: radial-gradient(rgb(29, 0, 29), black);
   width: 100%;
   border-top: 1px solid #434343;
 }
 .cta .container {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 30px;
   width: 100%;
   min-height: 90vh;
   flex-direction: column;
 }
 .cta .container h1 {
-  font-size: 5rem;
+  font-size: 6rem;
+  background-color: #310e68;
   font-family: "Recoleta DEMO", sans-serif;
-  color: #00c964;
+  background-image: linear-gradient(316deg, #310e68 0%, #b33683 74%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
   margin: 0;
   line-height: 1.2;
+}
+.cta .container h1::selection {
+  background: rgb(216, 117, 255, 0.1);
 }
 .cta .container p {
   font-size: 1.2rem;
   color: #e0e0e0;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 @keyframes shine {
