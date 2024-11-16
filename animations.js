@@ -143,7 +143,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             gsap.to(window, {
-                duration: 0.8,
+                duration: 0.4,
                 scrollTo: { y: target, offsetY: 70 },
                 ease: "power2.inOut"
             });
