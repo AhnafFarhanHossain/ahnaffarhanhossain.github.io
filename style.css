@@ -355,9 +355,9 @@ main {
   font-family: "Recoleta DEMO", sans-serif;
 }
 .section-headings h3 {
-  font-size: 24px;
+  font-size: 20px !important;
   color: #434343;
-  font-family: "Recoleta DEMO", sans-serif;
+  font-family: "Bai Jamjuree", sans-serif;
   text-transform: uppercase;
 }
 .section-headings h1 {
