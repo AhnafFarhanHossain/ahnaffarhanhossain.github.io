@@ -786,52 +786,224 @@ main {
   }
 }
 .cta {
-  min-height: 90vh;
-  background: radial-gradient(rgb(29, 0, 29), black);
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000, #002e1c);
   width: 100%;
   border-top: 1px solid #434343;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
 }
+
+/* Enhanced animated background */
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(0, 201, 100, 0.15), transparent 70%),
+    radial-gradient(circle at 80% 70%, rgba(179, 54, 131, 0.15), transparent 70%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(0, 201, 100, 0.01) 0px,
+      rgba(0, 201, 100, 0.01) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+  animation: gradientMove 30s ease-in-out infinite alternate;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+@keyframes gradientMove {
+  0% { 
+    background-position: 0% 0%;
+    transform: scale(1);
+  }
+  50% { 
+    transform: scale(1.1);
+  }
+  100% { 
+    background-position: 100% 100%;
+    transform: scale(1);
+  }
+}
+
 .cta .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
-  width: 100%;
-  min-height: 90vh;
-  flex-direction: column;
 }
-.cta .container h1 {
-  font-size: 6rem;
-  background-color: #310e68;
-  font-family: "Recoleta DEMO", sans-serif;
-  background-image: linear-gradient(316deg, #310e68 0%, #b33683 74%);
+
+.content-wrapper {
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cta .content-wrapper h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  background: linear-gradient(135deg, #00ff9d 0%, #00c964 50%, #b33683 100%);
+  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
   margin: 0;
   line-height: 1.2;
+  font-family: "Recoleta DEMO", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding: 0 20px;
 }
-.cta .container h1::selection {
-  background: rgb(216, 117, 255, 0.1);
+
+.cta .content-wrapper h1::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00c964, transparent);
+  border-radius: 2px;
 }
-.cta .container p {
-  font-size: 1.2rem;
+
+.cta .content-wrapper p {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
   color: #e0e0e0;
-  margin-bottom: 30px;
+  margin: 1rem auto;
   text-align: center;
+  max-width: 600px;
+  line-height: 1.7;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 400;
+  opacity: 0.9;
+  padding: 0 20px;
 }
 
-@keyframes shine {
-  0% {
-    left: -100px;
+.button-wrapper {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.cta .button-66 {
+  background: linear-gradient(135deg, #00c964, #008f49);
+  border: none;
+  padding: 1.25rem 2.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 20px rgba(0, 201, 100, 0.2);
+  font-family: "Bai Jamjuree", sans-serif;
+  text-transform: none;
+}
+
+/* Floating shapes positioning */
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 201, 100, 0.1);
+  filter: blur(5px);
+  z-index: 1;
+}
+
+.shape1 {
+  width: 150px;
+  height: 150px;
+  top: 15%;
+  left: 10%;
+}
+
+.shape2 {
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  right: 10%;
+}
+
+.shape3 {
+  width: 100px;
+  height: 100px;
+  bottom: 30%;
+  left: 15%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .cta {
+    padding: 60px 30px;
+  }
+  
+  .content-wrapper {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 40px 20px;
   }
 
-  60% {
-    left: 100%;
+  .content-wrapper {
+    gap: 1.25rem;
   }
 
-  to {
-    left: 100%;
+  .cta .content-wrapper h1::after {
+    width: 60px;
+    bottom: -15px;
+  }
+
+  .floating-shape {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 30px 15px;
+  }
+
+  .content-wrapper {
+    gap: 1rem;
+  }
+
+  .cta .button-66 {
+    padding: 1rem 2rem;
   }
 }
 
@@ -1688,4 +1860,80 @@ html {
 .skill-card:hover .custom-icon {
   fill: #00ff9d; /* Brighter color on hover */
   filter: drop-shadow(0 0 8px rgba(0, 201, 100, 0.5));
+}
+
+/* Global section transitions */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Common background for all sections */
+.about,
+.skills,
+.projects,
+.cta {
+  position: relative;
+  background: #000000;
+  overflow: hidden;
+}
+
+/* Very subtle gradient transitions */
+.about {
+  background: linear-gradient(135deg, #000000, #000503);
+}
+
+.skills {
+  background: linear-gradient(135deg, #000503, #000704);
+}
+
+.projects {
+  background: linear-gradient(135deg, #000704, #000905);
+}
+
+.cta {
+  background: linear-gradient(135deg, #000905, #000b06);
+}
+
+/* Subtle overlay patterns for visual interest without harsh transitions */
+.about::before,
+.skills::before,
+.projects::before,
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at center, rgba(0, 201, 100, 0.03), transparent 70%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(0, 201, 100, 0.01) 0px,
+      rgba(0, 201, 100, 0.01) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Remove all borders */
+.about,
+.skills,
+.projects,
+.cta {
+  border: none;
+}
+
+/* Optional: Add very subtle noise texture for better blending */
+.about::after,
+.skills::after,
+.projects::after,
+.cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noise"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%" height="100%" filter="url(%23noise)" opacity="0.015"/%3E%3C/svg%3E');
+  opacity: 0.3;
+  pointer-events: none;
+  mix-blend-mode: overlay;
 }
