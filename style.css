@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap");
 
+
 * {
   opacity: 1 !important;
 }
@@ -67,10 +68,6 @@ nav {
   background: rgba(39, 39, 39, 0.301);
   padding: 5px 12px;
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
 }
 .logo i {
   color: #00c964;
@@ -340,17 +337,14 @@ main {
 }
 
 .skills::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-      circle at 50% 50%,
-      rgba(0, 201, 100, 0.1),
-      transparent 70%
-    ),
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(0, 201, 100, 0.1), transparent 70%),
     repeating-linear-gradient(
       45deg,
       rgba(0, 201, 100, 0.02) 0px,
@@ -393,8 +387,7 @@ main {
   font-size: 80px;
 }
 
-.skill-card:hover .skill-icon,
-.tailwind-logo {
+.skill-card:hover .skill-icon, .tailwind-logo {
   color: #00c964;
   transform: scale(1.1);
 }
@@ -421,7 +414,7 @@ main {
 }
 
 .skill-icon::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: -2px;
   border-radius: 50%;
@@ -457,15 +450,9 @@ main {
 
 /* Optional: Add a subtle pulse animation to the icon on hover */
 @keyframes pulse {
-  0% {
-    transform: scale(1) translateZ(20px);
-  }
-  50% {
-    transform: scale(1.1) translateZ(20px);
-  }
-  100% {
-    transform: scale(1) translateZ(20px);
-  }
+  0% { transform: scale(1) translateZ(20px); }
+  50% { transform: scale(1.1) translateZ(20px); }
+  100% { transform: scale(1) translateZ(20px); }
 }
 
 .skill-card:hover .skill-icon i {
@@ -503,16 +490,13 @@ main {
 
 /* Animations */
 @keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  
 }
 .projects {
   padding: 80px 0;
@@ -557,7 +541,7 @@ main {
   color: #434343;
   margin-bottom: 10px;
   letter-spacing: 0 !important;
-  font-family: "Recoleta DEMO", sans-serif;
+  font-family: 'Recoleta DEMO', sans-serif;
 }
 
 .section-headings h1 {
@@ -730,22 +714,15 @@ main {
 
 /* Enhanced animated background */
 .cta::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-      circle at 20% 30%,
-      rgba(0, 201, 100, 0.15),
-      transparent 70%
-    ),
-    radial-gradient(
-      circle at 80% 70%,
-      rgba(179, 54, 131, 0.15),
-      transparent 70%
-    ),
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(0, 201, 100, 0.15), transparent 70%),
+    radial-gradient(circle at 80% 70%, rgba(179, 54, 131, 0.15), transparent 70%),
     repeating-linear-gradient(
       45deg,
       rgba(0, 201, 100, 0.01) 0px,
@@ -759,7 +736,7 @@ main {
 }
 
 .cta::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -773,14 +750,14 @@ main {
 }
 
 @keyframes gradientMove {
-  0% {
+  0% { 
     background-position: 0% 0%;
     transform: scale(1);
   }
-  50% {
+  50% { 
     transform: scale(1.1);
   }
-  100% {
+  100% { 
     background-position: 100% 100%;
     transform: scale(1);
   }
@@ -823,7 +800,7 @@ main {
 }
 
 .cta .content-wrapper h1::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -891,7 +868,7 @@ main {
   .cta {
     padding: 60px 30px;
   }
-
+  
   .content-wrapper {
     gap: 1.5rem;
   }
@@ -1075,25 +1052,11 @@ main {
   ul {
     display: none;
   }
-  header {
-    width: 100%;
-    border: none;
-    gap: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #4c4c4c;
-    padding-bottom: 15px;
-    border-radius: 0;
-  }
-  nav .social {
-    display: none;
-  }
   body {
     position: relative;
+    background: none;
     background: #000;
-    background-position: center center;
-    background-size: 100% 100%;
+    background-size: contain;
   }
   .about-content {
     max-width: 750px;
@@ -1228,59 +1191,35 @@ main {
   .logo {
     font-size: 1.01rem;
     text-align: center;
-    nav {
-      justify-content: space-between;
-      margin-left: 5px;
-      margin-right: 5px;
-      padding-top: 5px;
-      padding-left: 5px;
-      padding-bottom: 5px;
-      padding-right: 5px;
-    }
-    nav .right {
-      gap: 5px;
-    }
-    .logo {
-      font-size: 15px;
-    }
   }
-  @media (max-width: 370px) {
-    nav {
-      padding: 10px;
-      margin: 0 10px;
-      max-width: 90%;
-      align-items: center;
-      justify-content: center;
-    }
-  }
+}
 
-  html {
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-  }
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
 
-  /* Scrollbar styles */
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
 
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
+::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    border: 3px solid transparent;
-    background-clip: padding-box;
-  }
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
 
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-  section {
-    border-top: 1px solid #4c4c4c !important;
-    background: black !important;
-  }
+section {
+  border-top: 1px solid #4c4c4c !important;
+  background: black !important;
 }
