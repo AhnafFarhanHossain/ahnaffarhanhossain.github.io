@@ -17,6 +17,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
   />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.16/dist/lenis.css">
   </head>
   <body>
     <header
@@ -378,20 +379,13 @@
       }
     </script>
     
-    <!-- Your custom scripts -->
-    <script>
-      // Immediately show body to prevent flash of invisible content
-      gsap.set("body", { opacity: 1 });
-      
-      // Initialize ScrollTrigger
-      gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-    </script>
-    <script src="animations.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
 
     <script>
-    $(document).ready(function(){
+    function codes() {
+        $(document).ready(function(){
       $(".project-carousel").owlCarousel({
         loop: true,
         margin: 20,
@@ -417,6 +411,30 @@
         }
       });
     });
+
+      }
+      codes()
+
+
+      function lenis() {
+        // Initialize Lenis
+const lenis = new Lenis();
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+      }
+
+      lenis()
     </script>
   </body>
 </html>
