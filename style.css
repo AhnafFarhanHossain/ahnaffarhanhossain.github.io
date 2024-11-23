@@ -66,6 +66,12 @@ nav {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  background: rgba(39, 39, 39, 0.301);
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+.logo i {
+  color: #00c964;
 }
 nav .right {
   display: flex;
@@ -92,10 +98,10 @@ nav .social i:hover {
 }
 .menu-icon {
   cursor: pointer;
-  background: rgba(39, 39, 39, 0.459);
-  padding: 8px 12px;
+  background: rgba(39, 39, 39, 0.301);
+  padding: 9px 12px;
+  font-size: 1.05rem;
   border-radius: 5px;
-  font-size: 1.3rem;
   color: #fff;
   user-select: none;
 }
@@ -167,7 +173,6 @@ main {
   bottom: 150px;
   user-select: none;
   z-index: 9999;
-  gap: 30px;
   text-align: center;
 }
 .resi-status h3 {
@@ -253,8 +258,8 @@ main {
   transition-duration: 0.3s;
 }
 .main-heading {
-  font-size: 4.5rem;
-  letter-spacing: -2px;
+  font-size: 4.6rem;
+  letter-spacing: -3px;
 }
 .about {
   min-height: 100vh;
@@ -266,7 +271,7 @@ main {
 }
 .about .container .about-contents {
   display: flex;
-  padding: 40px;
+  padding: 20px;
   align-items: center;
   gap: 30px;
   justify-content: space-between;
@@ -494,26 +499,13 @@ main {
   position: relative;
   padding: 8px 16px;
   background: rgba(0, 201, 100, 0.1);
-  border-radius: 20px;
+  border-radius: 30px;
   font-size: 0.9rem;
   color: #00c964;
   font-weight: 500;
   display: inline-block;
   transform: translateZ(5px);
-}
-
-.skill-level::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  padding: 2px;
-  background: linear-gradient(45deg, #00c964, #00ff9d);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  border: 3px solid #00ff9d;
 }
 
 /* Animations */
@@ -524,28 +516,7 @@ main {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .card-wrapper {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-
-  .skill-card {
-    padding: 2rem 1.5rem;
-  }
-
-  .skill-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .skill-icon i {
-    font-size: 2rem;
-  }
-
-  .skill-card h2 {
-    font-size: 1.5rem;
-  }
+  
 }
 .projects {
   padding: 80px 0;
@@ -749,33 +720,6 @@ main {
   }
 }
 
-@media (max-width: 768px) {
-  .project-carousel .card {
-    padding: 20px;
-    margin: 10px;
-  }
-
-  .card-top h2 {
-    font-size: 20px;
-  }
-
-  .project-carousel .card p {
-    font-size: 15px;
-  }
-
-  .project-carousel .card img {
-    height: 180px;
-  }
-
-  .tech-stack {
-    gap: 6px;
-  }
-
-  .tech-stack span {
-    padding: 5px 12px;
-    font-size: 13px;
-  }
-}
 .cta {
   min-height: 100vh;
   background: linear-gradient(135deg, #000000, #002e1c);
@@ -906,21 +850,7 @@ main {
 }
 
 .cta .button-66 {
-  background: linear-gradient(135deg, #00c964, #008f49);
-  border: none;
-  padding: 1.25rem 2.5rem;
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
-  border-radius: 50px;
-  color: white;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  overflow: hidden;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  box-shadow: 0 10px 20px rgba(0, 201, 100, 0.2);
-  font-family: "Bai Jamjuree", sans-serif;
-  text-transform: none;
+  padding: 16px 30px;
 }
 
 /* Floating shapes positioning */
@@ -961,25 +891,6 @@ main {
   
   .content-wrapper {
     gap: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .cta {
-    padding: 40px 20px;
-  }
-
-  .content-wrapper {
-    gap: 1.25rem;
-  }
-
-  .cta .content-wrapper h1::after {
-    width: 60px;
-    bottom: -15px;
-  }
-
-  .floating-shape {
-    opacity: 0.5;
   }
 }
 
@@ -1165,8 +1076,9 @@ main {
     display: none;
   }
   body {
+    position: relative;
     background: none;
-    background: url(Assets/magicpattern-polka-dot-pattern-1727087072791.webp);
+    background: #000;
     background-size: contain;
   }
   .about-content {
@@ -1179,9 +1091,9 @@ main {
     font-size: 2.5rem;
     padding: 0 15px;
     font-family: "Recoleta DEMO";
-    font-weight: 900;
-    text-transform: lowercase;
-    letter-spacing: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
   .skills .container .card-wrapper {
     grid-template-columns: repeat(1, 1fr);
@@ -1199,8 +1111,9 @@ main {
   .about .container .about-contents button {
     margin: 0 auto;
   }
-  .about .container .about-contents p {
-    font-size: 2.5rem;
+  .about .container .about-contents p,
+  .about .container .about-contents span {
+    font-size: 1.5rem;
   }
   .skills h1 {
     font-size: 2.5rem;
@@ -1218,16 +1131,91 @@ main {
   }
   .cta .container h1 {
     font-size: 3rem;
-    padding: 0 20px 0 0;
+    padding: 0 0;
   }
   .cta .container p {
-    padding: 0 20px 0 0;
+    padding: 0 0;
   }
   .cta .container {
     padding: 30px 10px;
   }
+  .card-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .skill-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skill-icon i {
+    font-size: 2rem;
+  }
+
+  .skill-card h2 {
+    font-size: 1.5rem;
+  }
+  .cta {
+    padding: 40px 20px;
+  }
+
+  .content-wrapper {
+    gap: 1.25rem;
+  }
+
+  .cta .content-wrapper h1::after {
+    width: 60px;
+    bottom: -15px;
+  }
+
+  .floating-shape {
+    opacity: 0.5;
+  }
+  .project-carousel .card {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .card-top h2 {
+    font-size: 20px;
+  }
+
+  .project-carousel .card p {
+    font-size: 15px;
+  }
+
+  .project-carousel .card img {
+    height: 180px;
+  }
+
+  .tech-stack {
+    gap: 6px;
+  }
+
+  .tech-stack span {
+    padding: 5px 12px;
+    font-size: 13px;
+  }
+  .section-headings h1 {
+    line-height: 1.2;
+    font-size: 2rem !important;
+  }
+  .section-headings h3 {
+    font-size: 1rem !important;
+  }
 }
 @media (max-width: 400px) {
+  header {
+    width: 100%;
+    border: none;
+    padding: 10px 10px 0 10px;
+  }
   nav {
     justify-content: center;
     margin-left: 5px;
@@ -1239,6 +1227,9 @@ main {
   }
   nav .right {
     gap: 5px;
+  }
+  .logo {
+    font-size: 1.05rem;
   }
 }
 @media (max-width: 370px) {
