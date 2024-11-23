@@ -1230,6 +1230,7 @@ main {
   }
   .logo {
     font-size: 1.01rem;
+    text-align: center;
   }
 }
 @media (max-width: 370px) {
