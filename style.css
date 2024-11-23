@@ -1094,7 +1094,6 @@ main {
     background: #000;
     background-position: center center;
     background-size: 100% 100%;
-    
   }
   .about-content {
     max-width: 750px;
@@ -1226,64 +1225,62 @@ main {
   }
 }
 @media (max-width: 400px) {
-<<<<<<< Updated upstream
   .logo {
     font-size: 1.01rem;
     text-align: center;
-=======
-  nav {
-    justify-content: space-between;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-top: 5px;
-    padding-left: 5px;
-    padding-bottom: 5px;
-    padding-right: 5px;
+    nav {
+      justify-content: space-between;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding-top: 5px;
+      padding-left: 5px;
+      padding-bottom: 5px;
+      padding-right: 5px;
+    }
+    nav .right {
+      gap: 5px;
+    }
+    .logo {
+      font-size: 15px;
+    }
   }
-  nav .right {
-    gap: 5px;
+  @media (max-width: 370px) {
+    nav {
+      padding: 10px;
+      margin: 0 10px;
+      max-width: 90%;
+      align-items: center;
+      justify-content: center;
+    }
   }
-  .logo {
-    font-size: 15px;
+
+  html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
   }
-}
-@media (max-width: 370px) {
-  nav {
-    padding: 10px;
-    margin: 0 10px;
-    max-width: 90%;
-    align-items: center;
-    justify-content: center;
->>>>>>> Stashed changes
+
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 12px;
   }
-}
 
-html {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-/* Scrollbar styles */
-::-webkit-scrollbar {
-  width: 12px;
-}
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+  }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
-::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-  border: 3px solid transparent;
-  background-clip: padding-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-section {
-  border-top: 1px solid #4c4c4c !important;
-  background: black !important;
+  section {
+    border-top: 1px solid #4c4c4c !important;
+    background: black !important;
+  }
 }
