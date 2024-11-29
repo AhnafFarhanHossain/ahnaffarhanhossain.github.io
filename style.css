@@ -230,40 +230,52 @@ main {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 .back-to-top {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgb(20, 20, 20);
-  border: none;
-  font-weight: 600;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(0, 201, 100, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
   cursor: pointer;
-  transition-duration: 0.3s;
-  overflow: hidden;
   position: fixed;
-  right: 40px;
-  bottom: 80px;
-  z-index: 9999;
+  right: 25px;
+  bottom: 25px;
+  z-index: 99;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s, transform 0.3s;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+}
+
+.back-to-top .svgIcon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-to-top .svgIcon path {
+  fill: #00c964;
+}
+
+.back-to-top:hover {
+  background: rgba(25, 25, 25, 0.95);
+  border-color: rgba(0, 201, 100, 0.3);
+  transform: translateY(-2px);
+}
+
+.back-to-top:hover .svgIcon {
+  transform: translateY(-1px);
 }
 
 .back-to-top.visible {
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   transform: translateY(0);
-}
-
-.svgIcon {
-  width: 12px;
-  transition-duration: 0.3s;
-}
-
-.svgIcon path {
-  fill: white;
 }
 
 .back-to-top:hover {
@@ -277,6 +289,7 @@ main {
   /* width: 20px; */
   transition-duration: 0.3s;
   transform: translateY(-200%);
+  display: none;
 }
 
 .back-to-top::before {
@@ -866,7 +879,11 @@ main {
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, transparent, #00c964, transparent);
+  background: linear-gradient(90deg, 
+    transparent,
+    #00c964,
+    transparent
+  );
   border-radius: 2px;
 }
 
@@ -1100,6 +1117,7 @@ main {
   border: 1px solid rgba(0, 255, 157, 0.15);
   position: relative;
   overflow: hidden;
+  z-index: 100;
 }
 
 .footer-section .social-link::before {
