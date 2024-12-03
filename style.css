@@ -19,7 +19,8 @@ body {
   font-family: "Bai Jamjuree", sans-serif;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
     url(Assets/dark.webp);
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   color: white;
   display: flex;
   flex-direction: column;
@@ -28,10 +29,41 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background-attachment: fixed;
-  opacity: 0;
   line-height: 1.6;
   letter-spacing: 0.3px;
+  transition: opacity 0.3s ease;
 }
+
+:root {
+  --primary-color: #00c964;
+  --primary-dark: #002e1c;
+  --primary-light: rgba(0, 201, 100, 0.08);
+  --text-light: rgba(255, 255, 255, 0.9);
+  --border-color: rgba(0, 201, 100, 0.3);
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+/* Optimize images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Add loading state */
+.loading {
+  opacity: 0;
+}
+
+.loaded {
+  opacity: 1;
+}
+
 .container {
   max-width: 1340px;
   margin: 0 auto;
@@ -409,14 +441,17 @@ main {
 }
 
 .skills::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 50% 50%, rgba(0, 201, 100, 0.1), transparent 70%),
+  background: radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 201, 100, 0.1),
+      transparent 70%
+    ),
     repeating-linear-gradient(
       45deg,
       rgba(0, 201, 100, 0.02) 0px,
@@ -459,7 +494,8 @@ main {
   font-size: 80px;
 }
 
-.skill-card:hover .skill-icon, .tailwind-logo {
+.skill-card:hover .skill-icon,
+.tailwind-logo {
   color: #00c964;
   transform: scale(1.1);
 }
@@ -486,7 +522,7 @@ main {
 }
 
 .skill-icon::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -2px;
   border-radius: 50%;
@@ -522,9 +558,15 @@ main {
 
 /* Optional: Add a subtle pulse animation to the icon on hover */
 @keyframes pulse {
-  0% { transform: scale(1) translateZ(20px); }
-  50% { transform: scale(1.1) translateZ(20px); }
-  100% { transform: scale(1) translateZ(20px); }
+  0% {
+    transform: scale(1) translateZ(20px);
+  }
+  50% {
+    transform: scale(1.1) translateZ(20px);
+  }
+  100% {
+    transform: scale(1) translateZ(20px);
+  }
 }
 
 .skill-card:hover .skill-icon i {
@@ -562,13 +604,16 @@ main {
 
 /* Animations */
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  
 }
 .projects {
   padding: 80px 0;
@@ -613,7 +658,7 @@ main {
   color: #434343;
   margin-bottom: 10px;
   letter-spacing: 0 !important;
-  font-family: 'Recoleta DEMO', sans-serif;
+  font-family: "Recoleta DEMO", sans-serif;
 }
 
 .section-headings h1 {
@@ -786,15 +831,22 @@ main {
 
 /* Enhanced animated background */
 .cta::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(0, 201, 100, 0.15), transparent 70%),
-    radial-gradient(circle at 80% 70%, rgba(179, 54, 131, 0.15), transparent 70%),
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(0, 201, 100, 0.15),
+      transparent 70%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(179, 54, 131, 0.15),
+      transparent 70%
+    ),
     repeating-linear-gradient(
       45deg,
       rgba(0, 201, 100, 0.01) 0px,
@@ -808,7 +860,7 @@ main {
 }
 
 .cta::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -822,14 +874,14 @@ main {
 }
 
 @keyframes gradientMove {
-  0% { 
+  0% {
     background-position: 0% 0%;
     transform: scale(1);
   }
-  50% { 
+  50% {
     transform: scale(1.1);
   }
-  100% { 
+  100% {
     background-position: 100% 100%;
     transform: scale(1);
   }
@@ -872,18 +924,14 @@ main {
 }
 
 .cta .content-wrapper h1::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, 
-    transparent,
-    #00c964,
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, #00c964, transparent);
   border-radius: 2px;
 }
 
@@ -944,7 +992,7 @@ main {
   .cta {
     padding: 60px 30px;
   }
-  
+
   .content-wrapper {
     gap: 1.5rem;
   }
@@ -965,8 +1013,9 @@ main {
 }
 
 .footer {
-  background: linear-gradient(135deg, 
-    rgba(12, 12, 12, 0.95), 
+  background: linear-gradient(
+    135deg,
+    rgba(12, 12, 12, 0.95),
     rgba(18, 18, 18, 0.98),
     rgba(12, 12, 12, 0.95)
   );
@@ -980,13 +1029,14 @@ main {
 }
 
 .footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, 
+  background: linear-gradient(
+    90deg,
     transparent,
     rgba(0, 255, 157, 0.5),
     transparent
@@ -994,21 +1044,22 @@ main {
 }
 
 .footer::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: radial-gradient(
-    circle at 20% 20%,
-    rgba(0, 255, 157, 0.08) 0%,
-    transparent 40%
-  ), radial-gradient(
-    circle at 80% 80%,
-    rgba(0, 255, 157, 0.08) 0%,
-    transparent 40%
-  );
+      circle at 20% 20%,
+      rgba(0, 255, 157, 0.08) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(0, 255, 157, 0.08) 0%,
+      transparent 40%
+    );
   pointer-events: none;
   opacity: 0.5;
 }
@@ -1020,8 +1071,11 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    radial-gradient(circle at center, rgba(0, 255, 157, 0.1) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle at center,
+    rgba(0, 255, 157, 0.1) 1px,
+    transparent 1px
+  );
   background-size: 30px 30px;
   opacity: 0.3;
   pointer-events: none;
@@ -1065,7 +1119,7 @@ main {
 }
 
 .footer-section h4::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -1121,13 +1175,17 @@ main {
 }
 
 .footer-section .social-link::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(0, 255, 157, 0.15), transparent 70%);
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 255, 157, 0.15),
+    transparent 70%
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
@@ -1152,14 +1210,15 @@ main {
 }
 
 .footer-bottom::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 200px;
   height: 1px;
-  background: linear-gradient(90deg, 
+  background: linear-gradient(
+    90deg,
     transparent,
     rgba(255, 255, 255, 0.1),
     transparent
@@ -1172,12 +1231,6 @@ main {
   letter-spacing: 0.5px;
 }
 
-html {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
-
-/* Scrollbar styles */
 ::-webkit-scrollbar {
   display: none;
 }

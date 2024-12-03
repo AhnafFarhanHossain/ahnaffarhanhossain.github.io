@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ahnaf Farhan Hossain - Full Stack Developer Portfolio. Specialized in creating astonishing websites with expertise in HTML, CSS, JavaScript, and more.">
+    <meta name="keywords" content="web developer, full stack developer, HTML, CSS, JavaScript, Tailwind CSS, Bangladesh developer, portfolio">
     <title>Ahnaf Farhan's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,7 +23,7 @@
   />
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.16/dist/lenis.css">
   </head>
-  <body>
+  <body class="loading">
     <header
       id="home">
       <nav>
@@ -36,7 +38,7 @@
 
     <div id="myNav" class="overlay hidden">
       <div class="overlay-content">
-        <a href="#home">Home</a>
+        <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
@@ -266,19 +268,39 @@
               <span>jQuery</span>
               <span>Figma</span>
             </div>
-            <img src="Assets/Healthy.webp" alt="Elecar Dealership Website">
+            <img src="Assets/Healthy.webp" alt="Healthy Medical Website">
           </div>
           <div class="card">
             <div class="card-top">
               <h2>TechShabaka - Agency Website</h2>
-              
             </div>
             <p>"TechShabaka" is a renowned agency in Bangladesh. I am currently working as a Designer and Developer in the agency and our website is designed by me.</p>
             <div class="tech-stack">
               <span>Figma</span>
               <span>Development in Progress...</span>
             </div>
-            <img src="Assets/TechShabaka.webp" alt="Elecar Dealership Website">
+            <img src="Assets/TechShabaka.webp" alt="TechShabaka image">
+          </div>
+          <div class="card">
+            <div class="card-top">
+              <h2>Shadient - Lead Gen. Agency</h2>
+              <a href="https://shadient-ahnaf.vercel.app" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                </svg>
+              </a>
+            </div>
+            <p>Shadient is a creative lead generation agency offering services for web development, app development, digital marketing, SEO, and many more. Project duration - 1 week</p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>GSAP</span>
+              <span>Lenis</span>
+              <span>Figma</span>
+            </div>
+            <img src="Assets/shadient.webp" alt="Shadient Website">
           </div>
         </div>
       </div>
@@ -344,7 +366,7 @@
         <!-- Quick Links -->
         <div class="footer-section quick-links">
           <h4>Quick Links</h4>
-          <a href="#home" class="link">Home</a>
+          <a href="#" class="link">Home</a>
           <a href="#about" class="link">About</a>
           <a href="#experience" class="link">Services</a>
           <a href="#contact" class="link">Contact</a>
@@ -452,6 +474,32 @@ requestAnimationFrame(raf);
       }
 
       lenis()
+    </script>
+    <script>
+      // Loading state management
+      window.addEventListener('load', function() {
+        document.body.classList.remove('loading');
+        document.body.classList.add('loaded');
+      });
+
+      // Lazy load images
+      document.addEventListener('DOMContentLoaded', function() {
+        var images = document.querySelectorAll('img[data-src]');
+        var imageObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              var img = entry.target;
+              img.src = img.getAttribute('data-src');
+              img.removeAttribute('data-src');
+              imageObserver.unobserve(img);
+            }
+          });
+        });
+        
+        images.forEach(function(img) {
+          imageObserver.observe(img);
+        });
+      });
     </script>
   </body>
 </html>
