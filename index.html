@@ -7,6 +7,9 @@
     <meta name="keywords" content="web developer, full stack developer, HTML, CSS, JavaScript, Tailwind CSS, Bangladesh developer, portfolio">
     <title>Ahnaf Farhan's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <!-- Slick Slider Theme CSS Link -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -80,22 +83,25 @@
     
 
     <section class="about" id="about">
-      <div class="section-headings">
-        <h3>About Me</h3>
-        <h1>Who am I?</h1>
-      </div>
       <div class="container">
-        <div class="about-contents">
-          <div class="left">
-            <img src="Assets/LinkedIn_PFP-removebg-preview.webp" alt="" />
+        <div class="about-grid">
+          <div class="about-text">
+            <div class="section-label">About</div>
+            <h2>Frontend Developer and Designer at TechShabaka</h2>
+            <div class="about-description">
+              <p>
+                I am a passionate web designer and developer with a proven track record of creating visually stunning and functional websites. With expertise in modern web technologies, including HTML, CSS, JavaScript, and frameworks like Tailwind CSS, I craft user-friendly digital experiences tailored to meet client goals.
+              </p>
+              <p>
+                Currently, I work at the renowned agency TechShabaka, where I collaborate with a team of talented professionals to deliver cutting-edge web solutions. Beyond my technical skills, I am committed to maintaining a minimalistic yet impactful design approach, ensuring every project reflects both elegance and functionality.
+              </p>
+              <div class="cta-wrapper">
+                <a href="mailto:ahnaffarhanhossain@gmail.com" class="cta-link">Get in Touch</a>
+              </div>
+            </div>
           </div>
-          <div class="right">
-            <p>
-              "Hi! Farhan here. I am a passionate <span>young developer</span> aiming for Full
-              Stack in Future, but currently capable of creating <span>astonishing</span>
-              websites."
-            </p>
-            <a href="mailto:ahnaffarhanhossain@gmail.com"><button class="button-66" role="button">Let's Rule</button></a>
+          <div class="about-image">
+            <img src="Assets/avatar.png" alt="Ahnaf Farhan Hossain" />
           </div>
         </div>
       </div>
@@ -104,7 +110,7 @@
     <section class="skills" id="services">
       <div class="section-headings">
         <h3>Skills and Expertise</h3>
-        <h1>See what I've got in my pocket</h1>
+        <h1>Discover the skills and expertise I bring to the table.</h1>
       </div>
       <div class="container">
         <div class="card-wrapper">
@@ -113,49 +119,49 @@
               <i class="fab fa-html5"></i>
             </div>
             <h2>HTML</h2>
-            <div class="skill-level">Advanced</div>
+            <p>Crafting structured and semantic web content with modern standards.</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
-              <i class="fab fa-js"></i>
+              <i class="ri-javascript-fill"></i>
             </div>
             <h2>JavaScript</h2>
-            <div class="skill-level">Intermediate</div>
+            <p>Building interactive, dynamic web applications with efficient, functional code.</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fab fa-css3-alt"></i>
             </div>
             <h2>CSS</h2>
-            <div class="skill-level">Advanced</div>
+            <p>Designing visually appealing, responsive layouts with precision and creativity.</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="ri-tailwind-css-fill"></i>
             </div>
             <h2>Tailwind CSS</h2>
-            <div class="skill-level">Advanced</div>
+            <p>Developing sleek, customizable interfaces using utility-first CSS framework.</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fas fa-code"></i>
             </div>
             <h2>VS Code</h2>
-            <div class="skill-level">Advanced</div>
+            <p>Leveraging productivity-focused features for seamless coding and debugging experiences.</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fab fa-github"></i>
             </div>
             <h2>Github</h2>
-            <div class="skill-level">Intermediate</div>
+            <p>Collaborating and managing code efficiently with version control and repositories.</p>
           </div>
           <div class="skill-card">
             <div class="skill-icon">
               <i class="fab fa-figma"></i>
             </div>
             <h2>Figma</h2>
-            <div class="skill-level">Advanced</div>
+            <p>Designing intuitive, pixel-perfect interfaces with collaborative prototyping capabilities.</p>
           </div>
         </div>
       </div>
@@ -164,7 +170,7 @@
     <section class="projects" id="projects">
       <div class="section-headings">
         <h3>Featured Projects</h3>
-        <h1>My Lovely Creations</h1>
+        <h1>Showcasing My Finest Work</h1>
       </div>
       <div class="container">
         <div class="owl-carousel project-carousel owl-theme">
