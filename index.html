@@ -1,512 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ahnaf Farhan Hossain - Full Stack Developer Portfolio. Specialized in creating astonishing websites with expertise in HTML, CSS, JavaScript, and more.">
-    <meta name="keywords" content="web developer, full stack developer, HTML, CSS, JavaScript, Tailwind CSS, Bangladesh developer, portfolio, ahnaf farhan hossain, ahnaf farhan hossain, vercel, ahnaf farhan vercel">
-    <title>Ahnaf Farhan's Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <!-- Slick Slider Theme CSS Link -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <!-- Slick Slider CSS Link -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-      <!-- Lenis CSS Link -->
-      <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.16/dist/lenis.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-      <!-- Remix Icon Link -->
-      <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-  />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Ahnaf Farhan Hossain - Full Stack Developer Portfolio. Specialized in creating astonishing websites with expertise in HTML, CSS, JavaScript, and more.">
+  <meta name="keywords"
+    content="web developer, full stack developer, HTML, CSS, JavaScript, Tailwind CSS, Bangladesh developer, portfolio, ahnaf farhan hossain, ahnaf farhan hossain, vercel, ahnaf farhan vercel">
+  <title>Ahnaf Farhan's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Slick Slider Theme CSS Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Slick Slider CSS Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <!-- Lenis CSS Link -->
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.16/dist/lenis.css">
-  </head>
-  <body class="loading">
-    <header
-      id="home">
-      <nav>
-        <div class="left">
-          <div class="logo">ahnaf <i class="fas fa-code"></i></div>
-        </div>
-        <div class="right">
-          <div class="menu-icon" onclick="openNav()"><i class="ri-menu-4-line"></i></div>
-        </div>
-      </nav>
-    </header>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <!-- Remix Icon Link -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.16/dist/lenis.css">
+</head>
 
-    <div id="myNav" class="overlay hidden">
-      <div class="overlay-content">
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-        <a
-          href="https://www.linkedin.com/in/ahnaf-farhan-hossain-715893305/"
-          class="hire"
-          >Hire Me</a
-        >
+<body class="loading">
+  <header id="home">
+    <nav>
+      <div class="left">
+        <div class="logo">ahnaf <i class="ri-code-s-slash-line"></i></i></div>
       </div>
+      <div class="right">
+        <div class="menu-icon" onclick="openNav()"><i class="ri-menu-4-line"></i></div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="myNav" class="overlay hidden">
+    <div class="overlay-content">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/ahnaf-farhan-hossain-715893305/" class="secondary-btn">Hire Me</a>
     </div>
+  </div>
 
-    <main id="home">
-      <div class="main-heading">
-        AHNAF FARHAN HOSSAIN
-      </div>
-    </main>
-    <div class="resi-status">
-      <h3>Proudly Bangladeshi&nbsp;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 256 256" xml:space="preserve">
+  <main id="home">
+    <div class="main-heading">
+      AHNAF FARHAN HOSSAIN
+    </div>
+  </main>
+  <div class="resi-status">
+    <h3>Proudly Bangladeshi&nbsp;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1" width="24" height="24" viewBox="0 0 256 256" xml:space="preserve">
         <defs>
         </defs>
-        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-          <circle cx="45" cy="45" r="45" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,106,78); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
-          <circle cx="45" cy="45" r="19.5" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(244,42,65); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+          transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+          <circle cx="45" cy="45" r="45"
+            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,106,78); fill-rule: nonzero; opacity: 1;"
+            transform="  matrix(1 0 0 1 0 0) " />
+          <circle cx="45" cy="45" r="19.5"
+            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(244,42,65); fill-rule: nonzero; opacity: 1;"
+            transform="  matrix(1 0 0 1 0 0) " />
         </g>
-        </svg></span>
+      </svg></span>
       <h3 class="status">
         <i class="fa-solid fa-circle" style="color: rgb(0, 131, 28);"></i>&nbsp;Available for work
       </h3>
-    </div>
-    <a href="#">
-      <button class="back-to-top">
-        <svg class="svgIcon" viewBox="0 0 384 512">
-          <path
-            d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-          ></path>
-        </svg>
-      </button>
-    </a>
-    
-
-    <section class="about" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-text">
-            <div class="section-label">About</div>
-            <h2>Frontend Developer and Designer at TechShabaka.</h2>
-            <div class="about-description">
-              <p>
-                I am a passionate web designer and developer with a proven track record of creating visually stunning and functional websites. With expertise in modern web technologies, including HTML, CSS, JavaScript, and frameworks like Tailwind CSS, I craft user-friendly digital experiences tailored to meet client goals.
-              </p>
-              <p>
-                Currently, I work at the renowned agency TechShabaka, where I collaborate with a team of talented professionals to deliver cutting-edge web solutions. Beyond my technical skills, I am committed to maintaining a minimalistic yet impactful design approach, ensuring every project reflects both elegance and functionality.
-              </p>
-              <div class="cta-wrapper">
-                  <a href="mailto:ahnaffarhanhossain@gmail.com" class="primary-btn">Get in Touch</a>
-              </div>
-            </div>
-          </div>
-          <div class="about-image">
-            <img src="Assets/avatar.png" alt="Ahnaf Farhan Hossain" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="skills" id="services">
-      <div class="container">
-        <div class="section-headings">
-          <h3>Skills and Expertise</h3>
-          <h1>Discover the skills and expertise I bring to the table.</h1>
-        </div>
-          <div class="card-wrapper">
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="fab fa-html5"></i>
-              </div>
-              <h2>HTML</h2>
-              <p>Crafting structured and semantic web content with modern standards.</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="ri-javascript-fill"></i>
-              </div>
-              <h2>JavaScript</h2>
-              <p>Building interactive, dynamic web applications with efficient, functional code.</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="fab fa-css3-alt"></i>
-              </div>
-              <h2>CSS</h2>
-              <p>Designing visually appealing, responsive layouts with precision and creativity.</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="ri-tailwind-css-fill"></i>
-              </div>
-              <h2>Tailwind CSS</h2>
-              <p>Developing sleek, customizable interfaces using utility-first CSS framework.</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="fas fa-code"></i>
-              </div>
-              <h2>VS Code</h2>
-              <p>Leveraging productivity-focused features for seamless coding and debugging experiences.</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="fab fa-github"></i>
-              </div>
-              <h2>Github</h2>
-              <p>Collaborating and managing code efficiently with version control and repositories.</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon">
-                <i class="fab fa-figma"></i>
-              </div>
-              <h2>Figma</h2>
-              <p>Designing intuitive, pixel-perfect interfaces with collaborative prototyping capabilities.</p>
-            </div>
-            <div class="skill-card">
-              <div class="skill-icon">
-                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>file_type_vite</title><path d="M29.8836 6.146L16.7418 29.6457c-.2714.4851-.9684.488-1.2439.0052L2.0956 6.1482c-.3-.5262.1498-1.1635.746-1.057l13.156 2.3516a.7144.7144 0 00.2537-.0004l12.8808-2.3478c.5942-.1083 1.0463.5241.7515 1.0513z" fill="url(#paint0_linear)"></path><path d="M22.2644 2.0069l-9.7253 1.9056a.3571.3571 0 00-.2879.3294l-.5982 10.1038c-.014.238.2045.4227.4367.3691l2.7077-.6248c.2534-.0585.4823.1647.4302.4194l-.8044 3.9393c-.0542.265.1947.4918.4536.4132l1.6724-.5082c.2593-.0787.5084.1487.4536.414l-1.2784 6.1877c-.08.387.4348.598.6495.2662L16.5173 25 24.442 9.1848c.1327-.2648-.096-.5667-.387-.5106l-2.787.5379c-.262.0505-.4848-.1934-.4109-.4497l1.8191-6.306c.074-.2568-.1496-.5009-.4118-.4495z" fill="url(#paint1_linear)"></path><defs id="defs50"><linearGradient id="paint0_linear" x1="6.0002" y1="32.9999" x2="235" y2="344" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.07142 0 0 .07142 1.3398 1.8944)"><stop stop-color="#000000" id="stop38"></stop><stop offset="1" stop-color="#000000" id="stop40"></stop></linearGradient><linearGradient id="paint1_linear" x1="194.651" y1="8.8182" x2="236.076" y2="292.989" gradientUnits="userSpaceOnUse" gradientTransform="matrix(.07142 0 0 .07142 1.3398 1.8944)"><stop stop-color="#ffffff" id="stop43"></stop><stop offset=".0833" stop-color="#ffffff" id="stop45"></stop><stop offset="1" stop-color="#ffffff" id="stop47"></stop></linearGradient></defs></g></svg>
-              </div>
-              <h2>Vite</h2>
-              <p>Streamlining modern web development with fast, optimized build tools.</p>
-            </div>
-          </div>
-          </div>
-      </div>
-    </section>
-
-    <section class="projects" id="projects">
-      <div class="container">
-        <div class="section-headings">
-          <h3>Featured Projects</h3>
-          <h1>Showcasing My Finest Work</h1>
-        </div>
-        <div class="owl-carousel project-carousel owl-theme">
-          <!-- Project 1 -->
-          <div class="card">
-            <div class="card-top">
-              <h2>Hero Travels</h2>
-              <a href="https://herotravels.vercel.app" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                </svg>
-              </a>
-            </div>
-            <p>Hero Travels was a team project which is Travel Partner website. The tools that were used are - HTML, CSS, and Figma</p>
-            <div class="tech-stack">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Figma</span>
-            </div>
-            <img src="Assets/herotravels.webp" alt="Hero Travels Project">
-          </div>
-
-          <!-- Project 2 -->
-          <div class="card">
-            <div class="card-top">
-              <h2>Whitepace - SaaS</h2>
-              <a href="https://whitepace-beige.vercel.app" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                </svg>
-              </a>
-            </div>
-            <p>Whitepace is also a solo project made by using HTML, CSS, and Figma. It is a SaaS website that offers service for Project Management.</p>
-            <div class="tech-stack">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Figma</span>
-            </div>
-            <img src="Assets/whitepace.webp" alt="Whitepace Project">
-          </div>
-
-          <!-- Project 3 -->
-          <div class="card">
-            <div class="card-top">
-              <h2>Cheffest - Restaurant</h2>
-              <a href="https://cheffest.vercel.app" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                </svg>
-              </a>
-            </div>
-            <p>Cheffest is a modern restaurant website showcasing culinary excellence. Built with HTML, CSS, JavaScript, and designed in Figma.</p>
-            <div class="tech-stack">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>Figma</span>
-            </div>
-            <img src="Assets/cheffest.webp" alt="Cheffest Restaurant Website">
-          </div>
-
-          <!-- Project 4 -->
-          <div class="card">
-            <div class="card-top">
-              <h2>Elecar - Car Dealership</h2>
-              <a href="https://elecar-kappa.vercel.app" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                </svg>
-              </a>
-            </div>
-            <p>Elecar is a premium car dealership platform featuring luxury vehicles from top brands like Porsche, BMW, and Audi. Built with HTML, CSS, JavaScript, and designed in Figma.</p>
-            <div class="tech-stack">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>Figma</span>
-            </div>
-            <img src="Assets/elecar.webp" alt="Elecar Dealership Website">
-          </div>
-          <!-- Project 5 -->
-          <div class="card">
-            <div class="card-top">
-              <h2>Healthy - Medical Website</h2>
-              <a href="https://healthy-alpha.vercel.app" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                </svg>
-              </a>
-            </div>
-            <p>"Healthy" is a responsive wellness website crafted with HTML, CSS, JavaScript, and jQuery, with designs created in Figma. It features a clean, minimalist layout and smooth animations for an engaging user experience across all devices.</p>
-            <div class="tech-stack">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>jQuery</span>
-              <span>Figma</span>
-            </div>
-            <img src="Assets/Healthy.webp" alt="Healthy Medical Website">
-          </div>
-          <div class="card">
-            <div class="card-top">
-              <h2>TechShabaka - Agency Website</h2>
-            </div>
-            <p>"TechShabaka" is a renowned agency in Bangladesh. I am currently working as a Designer and Developer in the agency and our website is designed by me.</p>
-            <div class="tech-stack">
-              <span>Figma</span>
-              <span>Development in Progress...</span>
-            </div>
-            <img src="Assets/TechShabaka.webp" alt="TechShabaka image">
-          </div>
-          <div class="card">
-            <div class="card-top">
-              <h2>Shadient - Lead Gen. Agency</h2>
-              <a href="https://shadient-ahnaf.vercel.app" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                </svg>
-              </a>
-            </div>
-            <p>Shadient is a creative lead generation agency offering services for web development, app development, digital marketing, SEO, and many more. Project duration - 1 week</p>
-            <div class="tech-stack">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>GSAP</span>
-              <span>Lenis</span>
-              <span>Figma</span>
-            </div>
-            <img src="Assets/shadient.webp" alt="Shadient Website">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="container">
-        <div class="content-wrapper">
-          <div class="section-label">Get in Touch</div>
-          <h2>Let's Create Something Amazing Together</h2>
-          <p>Ready to transform your digital presence? Let's collaborate to build an exceptional website that captures your vision and drives results.</p>
-          <div class="cta-actions">
-            <a href="mailto:ahnaffarhanhossain@gmail.com" class="primary-btn">Start Your Project</a>
-            <a href="https://www.linkedin.com/in/ahnaf-farhan-hossain-715893305/" target="_blank" class="secondary-btn">View LinkedIn</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer" id="contact">
-      <div class="bg-dots"></div>
-      <div class="footer-container">
-        <!-- Contact Information -->
-        <div class="footer-section contact-info">
-          <h4>Contact Me</h4>
-          <p>
-            <i class="fas fa-map-marker-alt"></i> Banglamotor, Dhaka, Bangladesh
-          </p>
-          <p><i class="fas fa-envelope"></i> ahnaffarhanhossain@gmail.com</p>
-          <p><i class="fas fa-phone-alt"></i> +880 1886 155 446</p>
-        </div>
-
-        <!-- Social Media Links -->
-        <div class="footer-section social-media">
-          <h4>Follow Me</h4>
-          <a
-            href="https://www.facebook.com/profile.php?id=61552808302352"
-            class="social-link"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a href="https://x.com/AhnafPresents" class="social-link"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/ahnaf-farhan-hossain-715893305/"
-            class="social-link"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/ahnaf._._farh.an/"
-            class="social-link"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="footer-section quick-links">
-          <h4>Quick Links</h4>
-          <a href="#" class="link">Home</a>
-          <a href="#about" class="link">About</a>
-          <a href="#experience" class="link">Services</a>
-          <a href="#contact" class="link">Contact</a>
-        </div>
-      </div>
-      <!-- Copyright Notice -->
-      <div class="footer-bottom">
-        <p>&copy; 2024 Ahnaf Farhan. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <button class="back-to-top" aria-label="Scroll to top">
+  </div>
+  <a href="#">
+    <button class="back-to-top">
       <svg class="svgIcon" viewBox="0 0 384 512">
-        <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/>
+        <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+        </path>
       </svg>
     </button>
+  </a>
 
-    <script>
-      function openNav() {
-        document.getElementById("myNav").classList.toggle("hidden");
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label">About</div>
+          <h2>Frontend Developer and Designer at TechShabaka.</h2>
+          <div class="about-description">
+            <p>
+              I am a passionate web designer and developer with a proven track record of creating visually stunning and
+              functional websites. With expertise in modern web technologies, including HTML, CSS, JavaScript, and
+              frameworks like Tailwind CSS, I craft user-friendly digital experiences tailored to meet client goals.
+            </p>
+            <p>
+              Currently, I work at the renowned agency TechShabaka, where I collaborate with a team of talented
+              professionals to deliver cutting-edge web solutions. Beyond my technical skills, I am committed to
+              maintaining a minimalistic yet impactful design approach, ensuring every project reflects both elegance
+              and functionality.
+            </p>
+            <div class="cta-wrapper">
+              <a href="mailto:ahnaffarhanhossain@gmail.com" class="primary-btn">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="Assets/avatar.png" alt="Ahnaf Farhan Hossain" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="services">
+    <div class="container">
+      <div class="section-headings">
+        <h3>Skills and Expertise</h3>
+        <h1>Discover the skills and expertise I bring to the table.</h1>
+      </div>
+      <div class="card-wrapper">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h2>HTML</h2>
+          <p>Crafting structured and semantic web content with modern standards.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="ri-javascript-fill"></i>
+          </div>
+          <h2>JavaScript</h2>
+          <p>Building interactive, dynamic web applications with efficient, functional code.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <h2>CSS</h2>
+          <p>Designing visually appealing, responsive layouts with precision and creativity.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="ri-tailwind-css-fill"></i>
+          </div>
+          <h2>Tailwind CSS</h2>
+          <p>Developing sleek, customizable interfaces using utility-first CSS framework.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h2>VS Code</h2>
+          <p>Leveraging productivity-focused features for seamless coding and debugging experiences.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <h2>Github</h2>
+          <p>Collaborating and managing code efficiently with version control and repositories.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fab fa-figma"></i>
+          </div>
+          <h2>Figma</h2>
+          <p>Designing intuitive, pixel-perfect interfaces with collaborative prototyping capabilities.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>file_type_vite</title>
+                <path
+                  d="M29.8836 6.146L16.7418 29.6457c-.2714.4851-.9684.488-1.2439.0052L2.0956 6.1482c-.3-.5262.1498-1.1635.746-1.057l13.156 2.3516a.7144.7144 0 00.2537-.0004l12.8808-2.3478c.5942-.1083 1.0463.5241.7515 1.0513z"
+                  fill="url(#paint0_linear)"></path>
+                <path
+                  d="M22.2644 2.0069l-9.7253 1.9056a.3571.3571 0 00-.2879.3294l-.5982 10.1038c-.014.238.2045.4227.4367.3691l2.7077-.6248c.2534-.0585.4823.1647.4302.4194l-.8044 3.9393c-.0542.265.1947.4918.4536.4132l1.6724-.5082c.2593-.0787.5084.1487.4536.414l-1.2784 6.1877c-.08.387.4348.598.6495.2662L16.5173 25 24.442 9.1848c.1327-.2648-.096-.5667-.387-.5106l-2.787.5379c-.262.0505-.4848-.1934-.4109-.4497l1.8191-6.306c.074-.2568-.1496-.5009-.4118-.4495z"
+                  fill="url(#paint1_linear)"></path>
+                <defs id="defs50">
+                  <linearGradient id="paint0_linear" x1="6.0002" y1="32.9999" x2="235" y2="344"
+                    gradientUnits="userSpaceOnUse" gradientTransform="matrix(.07142 0 0 .07142 1.3398 1.8944)">
+                    <stop stop-color="#000000" id="stop38"></stop>
+                    <stop offset="1" stop-color="#000000" id="stop40"></stop>
+                  </linearGradient>
+                  <linearGradient id="paint1_linear" x1="194.651" y1="8.8182" x2="236.076" y2="292.989"
+                    gradientUnits="userSpaceOnUse" gradientTransform="matrix(.07142 0 0 .07142 1.3398 1.8944)">
+                    <stop stop-color="#ffffff" id="stop43"></stop>
+                    <stop offset=".0833" stop-color="#ffffff" id="stop45"></stop>
+                    <stop offset="1" stop-color="#ffffff" id="stop47"></stop>
+                  </linearGradient>
+                </defs>
+              </g>
+            </svg>
+          </div>
+          <h2>Vite</h2>
+          <p>Streamlining modern web development with fast, optimized build tools.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-headings">
+        <h3>Featured Projects</h3>
+        <h1>Showcasing My Finest Work</h1>
+      </div>
+      <div class="owl-carousel project-carousel owl-theme">
+        <!-- Project 1 -->
+        <div class="card">
+          <div class="card-top">
+            <h2>Hero Travels</h2>
+            <a href="https://herotravels.vercel.app" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+              </svg>
+            </a>
+          </div>
+          <p>Hero Travels was a team project which is Travel Partner website. The tools that were used are - HTML, CSS,
+            and Figma</p>
+          <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Figma</span>
+          </div>
+          <img src="Assets/herotravels.webp" alt="Hero Travels Project">
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card">
+          <div class="card-top">
+            <h2>Whitepace - SaaS</h2>
+            <a href="https://whitepace-beige.vercel.app" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+              </svg>
+            </a>
+          </div>
+          <p>Whitepace is also a solo project made by using HTML, CSS, and Figma. It is a SaaS website that offers
+            service for Project Management.</p>
+          <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Figma</span>
+          </div>
+          <img src="Assets/whitepace.webp" alt="Whitepace Project">
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card">
+          <div class="card-top">
+            <h2>Cheffest - Restaurant</h2>
+            <a href="https://cheffest.vercel.app" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+              </svg>
+            </a>
+          </div>
+          <p>Cheffest is a modern restaurant website showcasing culinary excellence. Built with HTML, CSS, JavaScript,
+            and designed in Figma.</p>
+          <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Figma</span>
+          </div>
+          <img src="Assets/cheffest.webp" alt="Cheffest Restaurant Website">
+        </div>
+
+        <!-- Project 4 -->
+        <div class="card">
+          <div class="card-top">
+            <h2>Elecar - Car Dealership</h2>
+            <a href="https://elecar-kappa.vercel.app" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+              </svg>
+            </a>
+          </div>
+          <p>Elecar is a premium car dealership platform featuring luxury vehicles from top brands like Porsche, BMW,
+            and Audi. Built with HTML, CSS, JavaScript, and designed in Figma.</p>
+          <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Figma</span>
+          </div>
+          <img src="Assets/elecar.webp" alt="Elecar Dealership Website">
+        </div>
+        <!-- Project 5 -->
+        <div class="card">
+          <div class="card-top">
+            <h2>Healthy - Medical Website</h2>
+            <a href="https://healthy-alpha.vercel.app" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+              </svg>
+            </a>
+          </div>
+          <p>"Healthy" is a responsive wellness website crafted with HTML, CSS, JavaScript, and jQuery, with designs
+            created in Figma. It features a clean, minimalist layout and smooth animations for an engaging user
+            experience across all devices.</p>
+          <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>jQuery</span>
+            <span>Figma</span>
+          </div>
+          <img src="Assets/Healthy.webp" alt="Healthy Medical Website">
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <h2>TechShabaka - Agency Website</h2>
+          </div>
+          <p>"TechShabaka" is a renowned agency in Bangladesh. I am currently working as a Designer and Developer in the
+            agency and our website is designed by me.</p>
+          <div class="tech-stack">
+            <span>Figma</span>
+            <span>Development in Progress...</span>
+          </div>
+          <img src="Assets/TechShabaka.webp" alt="TechShabaka image">
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <h2>Shadient - Lead Gen. Agency</h2>
+            <a href="https://shadient-ahnaf.vercel.app" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                <path fill-rule="evenodd"
+                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+              </svg>
+            </a>
+          </div>
+          <p>Shadient is a creative lead generation agency offering services for web development, app development,
+            digital marketing, SEO, and many more. Project duration - 1 week</p>
+          <div class="tech-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>GSAP</span>
+            <span>Lenis</span>
+            <span>Figma</span>
+          </div>
+          <img src="Assets/shadient.webp" alt="Shadient Website">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="section-label">Get in Touch</div>
+        <h2>Let's Create Something Amazing Together</h2>
+        <p>Ready to transform your digital presence? Let's collaborate to build an exceptional website that captures
+          your vision and drives results.</p>
+        <div class="cta-actions">
+          <a href="mailto:ahnaffarhanhossain@gmail.com" class="primary-btn">Start Your Project</a>
+          <a href="https://www.linkedin.com/in/ahnaf-farhan-hossain-715893305/" target="_blank"
+            class="secondary-btn">View LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="left">
+          <div class="logo"><span>ahnaf <i class="ri-code-s-slash-line"></i></span></div>
+          <p>"Design is not just what it looks like and feels like. Design is how it works." – Steve Jobs</p>
+          <div class="footer-btns">
+            <a href="https://www.linkedin.com/in/ahnaf-farhan-hossain-715893305/" class="primary-btn"
+              target="_blank">Let's Work Together</a>
+            <a href="https://www.linkedin.com/in/ahnaf-farhan-hossain-715893305/" target="_blank"
+              class="secondary-btn">View LinkedIn</a>
+          </div>
+        </div>
+        <div class="middle">
+          <h2>Navigation Links</h2>
+          <a href="#home" class="footer-links">Home</a>
+          <a href="#about" class="footer-links">About</a>
+          <a href="#skills" class="footer-links">Skills</a>
+          <a href="#projects" class="footer-links">Projects</a>
+        </div>
+        <div class="right">
+          <h2>Social Links</h2>
+          <a class="footer-social" href="https://github.com/AhnafFarhanHossain/" target="_blank"><i
+              class="ri-github-fill"></i> GitHub</a>
+          <a class="footer-social" href="https://instagram.com/ahnaf._._farh.an" target="_blank"><i
+              class="ri-instagram-line"></i> Instagram</a>
+          <a class="footer-social" href="https://x.com/AhnafPresents" target="_blank"><i class="ri-twitter-x-line"></i>
+            Twitter/X</a>
+        </div>
+      </div>
+      <div class="footer-bottom"></div>
+      <span class="copyright">Copyright &copy; 2024 Ahnaf Farhan</span>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Scroll to top">
+    <svg class="svgIcon" viewBox="0 0 384 512">
+      <path
+        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+    </svg>
+  </button>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("hidden");
+    }
+
+    // Back to top button functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      const backToTopButton = document.querySelector('.back-to-top');
+
+      function toggleBackToTop() {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('visible');
+        } else {
+          backToTopButton.classList.remove('visible');
+        }
       }
 
-      // Back to top button functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const backToTopButton = document.querySelector('.back-to-top');
-        
-        function toggleBackToTop() {
-          if (window.pageYOffset > 300) {
-            backToTopButton.classList.add('visible');
-          } else {
-            backToTopButton.classList.remove('visible');
-          }
-        }
+      // Initial check
+      toggleBackToTop();
 
-        // Initial check
-        toggleBackToTop();
-        
-        // Add scroll event listener
-        window.addEventListener('scroll', toggleBackToTop);
-        
-        // Smooth scroll to top
-        backToTopButton.addEventListener('click', function(e) {
-          e.preventDefault();
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
+      // Add scroll event listener
+      window.addEventListener('scroll', toggleBackToTop);
+
+      // Smooth scroll to top
+      backToTopButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
         });
-      });
-    </script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
-
-    <script>
-    function codes() {
-        $(document).ready(function(){
-      $(".project-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: true,
-        navText: [
-          '<i class="ri-arrow-drop-left-line"></i>',
-          '<i class="ri-arrow-drop-right-line"></i>'
-        ],
-        responsive: {
-          0: {
-            items: 1
-          },
-          768: {
-            items: 1
-          },
-          1024: {
-            items: 2
-          }
-        }
       });
     });
+  </script>
 
-      }
-      codes()
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
 
-
-      function lenis() {
-        // Initialize Lenis
-const lenis = new Lenis();
-
-// Listen for the scroll event and log the event data
-lenis.on('scroll', (e) => {
-  console.log(e);
-});
-
-// Use requestAnimationFrame to continuously update the scroll
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-      }
-
-      lenis()
-    </script>
-    <script>
-      // Loading state management
-      window.addEventListener('load', function() {
-        document.body.classList.remove('loading');
-        document.body.classList.add('loaded');
-      });
-
-      // Lazy load images
-      document.addEventListener('DOMContentLoaded', function() {
-        var images = document.querySelectorAll('img[data-src]');
-        var imageObserver = new IntersectionObserver(function(entries, observer) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              var img = entry.target;
-              img.src = img.getAttribute('data-src');
-              img.removeAttribute('data-src');
-              imageObserver.unobserve(img);
+  <script>
+    function codes() {
+      $(document).ready(function () {
+        $(".project-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          dots: true,
+          autoplay: true,
+          autoplayTimeout: 5000,
+          autoplayHoverPause: true,
+          navText: [
+            '<i class="ri-arrow-drop-left-line"></i>',
+            '<i class="ri-arrow-drop-right-line"></i>'
+          ],
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 1
+            },
+            1024: {
+              items: 2
             }
-          });
-        });
-        
-        images.forEach(function(img) {
-          imageObserver.observe(img);
+          }
         });
       });
-    </script>
-  </body>
+
+    }
+    codes()
+
+
+    function lenis() {
+      // Initialize Lenis
+      const lenis = new Lenis();
+
+      // Listen for the scroll event and log the event data
+      lenis.on('scroll', (e) => {
+        console.log(e);
+      });
+
+      // Use requestAnimationFrame to continuously update the scroll
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    }
+
+    lenis()
+  </script>
+  <script>
+    // Loading state management
+    window.addEventListener('load', function () {
+      document.body.classList.remove('loading');
+      document.body.classList.add('loaded');
+    });
+
+    // Lazy load images
+    document.addEventListener('DOMContentLoaded', function () {
+      var images = document.querySelectorAll('img[data-src]');
+      var imageObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var img = entry.target;
+            img.src = img.getAttribute('data-src');
+            img.removeAttribute('data-src');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach(function (img) {
+        imageObserver.observe(img);
+      });
+    });
+  </script>
+</body>
+
 </html>
