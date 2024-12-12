@@ -114,7 +114,7 @@ nav {
   cursor: pointer;
   background: #111;
   padding: 6px 12px;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   border-radius: 4px;
   color: var(--white);
   user-select: none;
@@ -137,16 +137,17 @@ nav {
   z-index: 99999;
   right: 35px;
   top: 100px;
-  background: rgba(18, 18, 18, 0.98);
+  background: var(--black);
   overflow: hidden;
   transition: 0.3s ease;
   padding: 20px 45px;
-  border-radius: 12px;
+  border-radius: 4px;
+  border: 3px solid var(--border);
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
   opacity: 1;
   visibility: visible;
+  font-family: var(--mono-font);
 }
 
 .overlay.hidden {
@@ -166,7 +167,7 @@ nav {
 .overlay a {
   padding: 6px 16px;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.9);
   display: block;
   transition: all 0.2s ease;
