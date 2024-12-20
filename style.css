@@ -85,7 +85,7 @@ header {
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #4c4c4c;
+  border-bottom: 1px solid var(--border);
   position: fixed;
   top: 0;
   z-index: 999;
@@ -448,11 +448,11 @@ main {
   padding: 1.5rem 2rem;
   text-align: left;
   transition: all 0.2s ease;
-  border: 3px solid transparent;
+  border: 3px solid var(--border);
   overflow: hidden;
 }
 .skill-card:hover {
-  border: 3px solid #343a40;
+  border: 3px solid var(--white);
 }
 
 /* Icon Container */
