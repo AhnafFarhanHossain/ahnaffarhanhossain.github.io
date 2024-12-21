@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <!-- Head Section Start -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
@@ -33,9 +34,11 @@
   <!-- Remix Icon Link -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.16/dist/lenis.css">
+  <!-- Head Section End -->
 </head>
 
 <body class="loading">
+  <!-- Header Section Start -->
   <header id="home">
     <nav>
       <div class="left">
@@ -46,22 +49,29 @@
       </div>
     </nav>
   </header>
+  <!-- Header Section End -->
 
+  <!-- Overlay Section Start -->
   <div id="myNav" class="overlay hidden">
     <div class="overlay-content">
       <a href="#">Home</a>
       <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a href="#skills">Skills</a>
+      <a href="#cta">Contact</a>
       <a href="https://www.linkedin.com/in/ahnaf-farhan-hossain-715893305/" class="secondary-btn">Hire Me</a>
     </div>
   </div>
+  <!-- Overlay Section End -->
 
+  <!-- Main Section Start -->
   <main id="home">
     <div class="main-heading">
       AHNAF FARHAN HOSSAIN
     </div>
   </main>
+  <!-- Main Section End -->
+
+  <!-- Resi Status Section Start -->
   <div class="resi-status">
     <h3>Proudly Bangladeshi&nbsp;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         version="1.1" width="24" height="24" viewBox="0 0 256 256" xml:space="preserve">
@@ -81,6 +91,9 @@
         <i class="fa-solid fa-circle" style="color: rgb(0, 131, 28);"></i>&nbsp;Available for work
       </h3>
   </div>
+  <!-- Resi Status Section End -->
+
+  <!-- Back to Top Button Start -->
   <a href="#">
     <button class="back-to-top">
       <svg class="svgIcon" viewBox="0 0 384 512">
@@ -90,8 +103,9 @@
       </svg>
     </button>
   </a>
+  <!-- Back to Top Button End -->
 
-
+  <!-- About Section Start -->
   <section class="about" id="about">
     <div class="container">
       <div class="about-grid">
@@ -121,8 +135,10 @@
       </div>
     </div>
   </section>
+  <!-- About Section End -->
 
-  <section class="skills" id="services">
+  <!-- Skills Section Start -->
+  <section class="skills" id="skills">
     <div class="container">
       <div class="section-headings">
         <h3>Skills and Expertise</h3>
@@ -214,12 +230,15 @@
     </div>
     </div>
   </section>
+  <!-- Skills Section End -->
 
+  <!-- Projects Section Start -->
   <section class="projects" id="projects">
     <div class="container">
       <div class="section-headings">
         <h3>Featured Projects</h3>
         <h1>Showcasing My Finest Work</h1>
+        <!-- Navigation arrows will be positioned here -->
       </div>
       <div class="owl-carousel project-carousel owl-theme">
         <!-- Project 1 -->
@@ -385,8 +404,10 @@
       </div>
     </div>
   </section>
+  <!-- Projects Section End -->
 
-  <section class="cta">
+  <!-- CTA Section Start -->
+  <section class="cta" id="cta">
     <div class="container">
       <div class="content-wrapper">
         <div class="section-label">Get in Touch</div>
@@ -401,7 +422,9 @@
       </div>
     </div>
   </section>
+  <!-- CTA Section End -->
 
+  <!-- Footer Section Start -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -409,13 +432,15 @@
           <div class="logo"><span>ahnaf <i class="ri-code-s-slash-line"></i></span></div>
           <p>"Design is not just what it looks like and feels like. Design is how it works." – Steve Jobs</p>
           <div class="footer-btns">
-            <a href="https://www.linkedin.com/in/ahnaf-farhan-hossain-715893305/" class="primary-btn" target="_blank">Let's Work Together</a>
-            <a href="https://www.linkedin.com/in/ahnaf-farhan-hossain-715893305/" target="_blank" class="secondary-btn">View LinkedIn</a>
+            <a href="https://www.linkedin.com/in/ahnaf-farhanhossain-715893305/" class="primary-btn"
+              target="_blank">Let's Work Together</a>
+            <a href="https://www.linkedin.com/in/ahnaf-farhanhossain-715893305/" target="_blank"
+              class="secondary-btn">View LinkedIn</a>
           </div>
           <nav class="footer-nav">
             <a href="#home">home</a>
             <a href="#about">about</a>
-            <a href="#services">services</a>
+            <a href="#skills">skills</a>
             <a href="#projects">projects</a>
           </nav>
         </div>
@@ -451,156 +476,22 @@
       </div>
     </div>
   </footer>
+  <!-- Footer Section End -->
 
+  <!-- Back to Top Button Start -->
   <button class="back-to-top" aria-label="Scroll to top">
     <svg class="svgIcon" viewBox="0 0 384 512">
       <path
         d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
     </svg>
   </button>
+  <!-- Back to Top Button End -->
 
-  <script>
-    function openNav() {
-      document.getElementById("myNav").classList.toggle("hidden");
-    }
-
-    // Back to top button functionality
-    document.addEventListener('DOMContentLoaded', function () {
-      const backToTopButton = document.querySelector('.back-to-top');
-
-      function toggleBackToTop() {
-        if (window.pageYOffset > 300) {
-          backToTopButton.classList.add('visible');
-        } else {
-          backToTopButton.classList.remove('visible');
-        }
-      }
-
-      // Initial check
-      toggleBackToTop();
-
-      // Add scroll event listener
-      window.addEventListener('scroll', toggleBackToTop);
-
-      // Smooth scroll to top
-      backToTopButton.addEventListener('click', function (e) {
-        e.preventDefault();
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
-  <script>
-    function codes() {
-      $(document).ready(function () {
-        $(".project-carousel").owlCarousel({
-          loop: true,
-          margin: 10,
-          nav: true,
-          dots: true,
-          autoplay: true,
-          autoplayTimeout: 5000,
-          autoplayHoverPause: true,
-          navText: [
-            '<i class="ri-arrow-drop-left-line"></i>',
-            '<i class="ri-arrow-drop-right-line"></i>'
-          ],
-          responsive: {
-            0: {
-              items: 1
-            },
-            768: {
-              items: 1
-            },
-            1024: {
-              items: 2
-            }
-          }
-        });
-      });
-
-    }
-    codes()
-
-
-    function lenis() {
-      // Initialize Lenis
-      const lenis = new Lenis();
-
-      // Listen for the scroll event and log the event data
-      lenis.on('scroll', (e) => {
-        console.log(e);
-      });
-
-      // Use requestAnimationFrame to continuously update the scroll
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-
-      requestAnimationFrame(raf);
-    }
-
-    lenis()
-  </script>
-  <script>
-    // Loading state management
-    window.addEventListener('load', function () {
-      document.body.classList.remove('loading');
-      document.body.classList.add('loaded');
-    });
-
-    // Lazy load images
-    document.addEventListener('DOMContentLoaded', function () {
-      var images = document.querySelectorAll('img[data-src]');
-      var imageObserver = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            var img = entry.target;
-            img.src = img.getAttribute('data-src');
-            img.removeAttribute('data-src');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-
-      images.forEach(function (img) {
-        imageObserver.observe(img);
-      });
-    });
-  </script>
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      const name = this.querySelector('[name="name"]').value;
-      const email = this.querySelector('[name="email"]').value;
-      const message = this.querySelector('[name="message"]').value;
-      
-      // Basic validation
-      if (name.length < 2) {
-        e.preventDefault();
-        alert('Please enter a valid name');
-        return;
-      }
-      
-      if (!email.includes('@') || !email.includes('.')) {
-        e.preventDefault();
-        alert('Please enter a valid email address');
-        return;
-      }
-      
-      if (message.length < 10) {
-        e.preventDefault();
-        alert('Please enter a message with at least 10 characters');
-        return;
-      }
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
