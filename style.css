@@ -1024,6 +1024,7 @@ main {
 .primary-btn:hover {
   background: rgba(255, 255, 255, 0.9);
   transform: translateY(-2px);
+  color: var(--black);
 }
 
 .secondary-btn {
@@ -1173,7 +1174,7 @@ footer {
   font-weight: 300;
   letter-spacing: -0.04em;
   transition: all 0.3s ease;
-  font-family: var(--mono-font);
+  font-family: var (--mono-font);
   position: relative;
   text-transform: lowercase;
 }
@@ -1301,7 +1302,84 @@ footer {
     flex-direction: column;
   }
 }
-/* Footer Styles End */
+
+/* Footer Left Section Styles */
+.footer .container .footer-grid .left {
+  padding: 2rem 0;
+  background: transparent;
+  border: none;
+}
+
+.footer .container .footer-grid .left .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.footer .container .footer-grid .left .logo span {
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Space Mono", monospace;
+}
+
+.footer .container .footer-grid .left p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+  margin: 0 0 3rem 0;
+  padding-left: 2rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+.footer .container .footer-grid .left .footer-btns {
+  margin-bottom: 3.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-nav {
+  padding-top: 3rem;
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 3rem;
+}
+
+.footer-nav a {
+  font-size: 1.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  transition: all 0.3s ease;
+  font-family: "Space Mono", monospace;
+}
+
+@media (max-width: 768px) {
+  .footer .container .footer-grid .left {
+    padding: 1rem 0;
+  }
+
+  .footer .container .footer-grid .left p {
+    padding-left: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .footer .container .footer-grid .left .footer-btns {
+    flex-direction: column;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
 
 /* Contact Wrapper Styles Start */
 .contact-wrapper {
