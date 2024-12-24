@@ -693,7 +693,6 @@ main {
 .section-headings {
   display: flex;
   flex-direction: column;
-  margin-bottom: 60px;
 }
 
 .section-headings .title-group {
